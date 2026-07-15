@@ -25,6 +25,11 @@ describe("AJÒ deterministic eval set", () => {
       expect(new Set([plan.top.id, ...plan.alternatives.map((spot) => spot.id)]).size).toBe(3);
       expect(plan.watch.fallback).not.toBe(plan.top.name);
       expect(plan.top.reasons.length).toBeGreaterThan(0);
+      expect(plan.top.webcam.url).toMatch(/^https:\/\//);
+      expect(plan.top.signals.crowding.score).toBeGreaterThanOrEqual(0);
+      expect(plan.top.signals.crowding.score).toBeLessThanOrEqual(100);
+      expect(Date.parse(plan.top.signals.camera.expiresAt) - Date.parse(plan.top.signals.camera.observedAt)).toBe(30 * 60 * 1000);
+      expect(plan.top.signals.camera.retention).toBe("Images not retained");
     });
   }
 

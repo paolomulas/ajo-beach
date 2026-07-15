@@ -39,6 +39,10 @@ The product follows a visible agent loop:
 
 - Relax, Beach Life, Surf and Kitesurf mission profiles
 - Sardinian spot shortlist with transparent mission-fit score
+- Coastal Intelligence deck with live wind/gusts, sea state, water/air temperature, UV-ready weather fields and clear provenance labels
+- Explainable crowding, parking-pressure and Posidonia-risk proxies displayed separately from live observations
+- Direct or nearest Sardinian live-camera link for every curated beach
+- A visible 30-minute Camera Agent pipeline (snapshot → privacy filter → structured vision signal → replan), explicitly simulated until authorized scheduled ingestion is enabled
 - Skill, accessibility, family and drive-time constraints
 - GPT‑5.6 function calling and visible agent activity
 - Versioned weather watch and a real one-tap replan endpoint
@@ -78,7 +82,8 @@ Next.js 16, React 19, TypeScript, OpenAI Agents SDK, Zod, Vitest, service worker
 
 The contest slice stores the active mission in browser local storage and keeps the budget/cache state in the warm serverless instance. A production rollout would move those records and atomic quotas to a durable store; the OpenAI project spend limit remains the deployment-wide backstop.
 
-Live environmental data: Open‑Meteo, CC BY 4.0, with attribution.
+Live environmental data: Open‑Meteo, CC BY 4.0, with attribution. Camera links point to
+Panoramicams pages; the contest demo does not scrape, embed or retain their frames.
 
 ## License
 

@@ -14,22 +14,81 @@ export type Conditions = {
   windDirection: number;
   gusts: number;
   waveHeight: number;
+  wavePeriod: number;
   temperature: number;
+  apparentTemperature: number;
+  humidity: number;
+  cloudCover: number;
+  uvIndex: number;
+  seaTemperature: number;
   source: "live" | "demo";
 };
 
-export type RankedSpot = Spot & Conditions & { score: number; reasons: string[]; risk: string };
+export type CoastalSignals = {
+  crowding: { score: number; label: "Quiet" | "Moderate" | "Busy" | "Very busy"; confidence: number };
+  parking: { score: number; label: "Easy" | "Filling up" | "Difficult"; detail: string };
+  posidonia: { score: number; label: "Unlikely" | "Possible" | "Likely"; detail: string };
+  camera: {
+    state: "demo-snapshot";
+    observedAt: string;
+    expiresAt: string;
+    confidence: number;
+    retention: "Images not retained";
+  };
+};
+
+export type RankedSpot = Spot & Conditions & { score: number; reasons: string[]; risk: string; signals: CoastalSignals };
 
 const demoByCoast: Record<Spot["coast"], Conditions> = {
-  south: { windSpeed: 13, windDirection: 315, gusts: 18, waveHeight: 0.5, temperature: 29, source: "demo" },
-  east: { windSpeed: 9, windDirection: 315, gusts: 14, waveHeight: 0.3, temperature: 30, source: "demo" },
-  west: { windSpeed: 21, windDirection: 305, gusts: 29, waveHeight: 1.6, temperature: 27, source: "demo" },
-  north: { windSpeed: 24, windDirection: 300, gusts: 32, waveHeight: 1.1, temperature: 26, source: "demo" },
+  south: { windSpeed: 13, windDirection: 315, gusts: 18, waveHeight: 0.5, wavePeriod: 5, temperature: 29, apparentTemperature: 31, humidity: 58, cloudCover: 12, uvIndex: 7, seaTemperature: 25, source: "demo" },
+  east: { windSpeed: 9, windDirection: 315, gusts: 14, waveHeight: 0.3, wavePeriod: 4, temperature: 30, apparentTemperature: 32, humidity: 61, cloudCover: 8, uvIndex: 8, seaTemperature: 26, source: "demo" },
+  west: { windSpeed: 21, windDirection: 305, gusts: 29, waveHeight: 1.6, wavePeriod: 8, temperature: 27, apparentTemperature: 28, humidity: 66, cloudCover: 21, uvIndex: 6, seaTemperature: 24, source: "demo" },
+  north: { windSpeed: 24, windDirection: 300, gusts: 32, waveHeight: 1.1, wavePeriod: 7, temperature: 26, apparentTemperature: 27, humidity: 63, cloudCover: 16, uvIndex: 6, seaTemperature: 24, source: "demo" },
 };
 
 function angleDistance(a: number, b: number) {
   const d = Math.abs(a - b) % 360;
   return d > 180 ? 360 - d : d;
+}
+
+function clamp(value: number) {
+  return Math.max(0, Math.min(100, Math.round(value)));
+}
+
+function cameraWindow(now = new Date()) {
+  const observed = new Date(now);
+  observed.setUTCMinutes(Math.floor(observed.getUTCMinutes() / 30) * 30, 0, 0);
+  const expires = new Date(observed.getTime() + 30 * 60 * 1000);
+  return { observedAt: observed.toISOString(), expiresAt: expires.toISOString() };
+}
+
+function deriveCoastalSignals(spot: Spot, c: Conditions): CoastalSignals {
+  const localHour = Number(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Rome", hour: "2-digit", hour12: false }).format(new Date()));
+  const timePressure = localHour >= 10 && localHour <= 17 ? 14 : localHour >= 8 && localHour <= 19 ? 5 : -12;
+  const beachWeather = c.temperature >= 24 && c.cloudCover < 45 && c.windSpeed < 22 ? 7 : -5;
+  const crowdScore = clamp(spot.crowdBaseline + timePressure + beachWeather);
+  const crowdLabel = crowdScore >= 85 ? "Very busy" : crowdScore >= 65 ? "Busy" : crowdScore >= 40 ? "Moderate" : "Quiet";
+  const parkingPenalty = spot.parkingProfile === "limited" ? 18 : spot.parkingProfile === "urban" ? 7 : 3;
+  const parkingScore = clamp(crowdScore + parkingPenalty);
+  const parkingLabel = parkingScore >= 78 ? "Difficult" : parkingScore >= 50 ? "Filling up" : "Easy";
+  const posidoniaScore = clamp(spot.posidoniaSensitivity + c.waveHeight * 10 + Math.max(0, c.gusts - 18) * 0.7);
+  const posidoniaLabel = posidoniaScore >= 68 ? "Likely" : posidoniaScore >= 38 ? "Possible" : "Unlikely";
+  const window = cameraWindow();
+
+  return {
+    crowding: { score: crowdScore, label: crowdLabel, confidence: spot.webcam.coverage === "direct" ? 82 : 61 },
+    parking: {
+      score: parkingScore,
+      label: parkingLabel,
+      detail: spot.parkingProfile === "limited" ? "Limited roadside capacity · arrive early" : spot.parkingProfile === "urban" ? "Several access points · traffic sensitive" : "Moderate local capacity",
+    },
+    posidonia: {
+      score: posidoniaScore,
+      label: posidoniaLabel,
+      detail: "Proxy from beach sensitivity, recent waves and gusts",
+    },
+    camera: { state: "demo-snapshot", ...window, confidence: spot.webcam.coverage === "direct" ? 82 : 61, retention: "Images not retained" },
+  };
 }
 
 function scoreSpot(spot: Spot, profile: Profile, c: Conditions): RankedSpot {
@@ -82,7 +141,7 @@ function scoreSpot(spot: Spot, profile: Profile, c: Conditions): RankedSpot {
       ? "Strong gusts — verify locally"
       : "Conditions indicative — check locally";
 
-  return { ...spot, ...c, score: Math.max(9, Math.min(98, Math.round(score))), reasons: reasons.slice(0, 3), risk };
+  return { ...spot, ...c, score: Math.max(9, Math.min(98, Math.round(score))), reasons: reasons.slice(0, 3), risk, signals: deriveCoastalSignals(spot, c) };
 }
 
 export function rankSpots(profile: Profile, conditions?: Record<string, Conditions>) {
@@ -98,6 +157,7 @@ export function buildDemoPlan(profile: Profile) {
   const activity = [
     `Understood your ${profile.mission === "relax" ? "beach-day" : profile.mission} mission`,
     "Checked wind, gusts, swell and temperature",
+    "Fused camera, crowding, parking and shoreline signals",
     `Compared ${SPOTS.length} Sardinian spots against your constraints`,
     `Built a weather watch for ${top.name}`,
   ];
@@ -117,6 +177,6 @@ export function buildDemoPlan(profile: Profile) {
       trigger: profile.mission === "relax" ? "wind > 18 kt or waves > 0.9 m" : "gust spread > 12 kt or skill mismatch",
       fallback: second.name,
     },
-    activity,
+    activity: activity.slice(0, 5),
   };
 }

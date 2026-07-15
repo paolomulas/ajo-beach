@@ -54,7 +54,9 @@ export default function Home() {
       const savedPlan = window.localStorage.getItem("ajo-active-mission");
       if (!savedPlan) return;
       try {
-        setPlan(JSON.parse(savedPlan) as Plan);
+        const parsed = JSON.parse(savedPlan) as Plan;
+        if (!parsed.top?.signals) throw new Error("Outdated saved mission");
+        setPlan(parsed);
         setWatching(true);
       } catch {
         window.localStorage.removeItem("ajo-active-mission");
@@ -258,11 +260,45 @@ export default function Home() {
               <p className="result-label">BEST MOVE · {plan.window}</p>
               <h3>{plan.top.name}</h3>
               <p>{plan.summary}</p>
-              <div className="conditions-row"><span>⌁ {plan.top.windSpeed} kt</span><span>≈ {plan.top.waveHeight.toFixed(1)} m</span><span>☀ {plan.top.temperature}°</span></div>
+              <div className="conditions-row"><span>⌁ {plan.top.windSpeed} kt · {plan.top.gusts} gusts</span><span>≈ {plan.top.waveHeight.toFixed(1)} m · {plan.top.wavePeriod}s</span><span>◉ {plan.top.seaTemperature}° water</span></div>
               <strong>{plan.departure}</strong>
             </div>
             <a className="photo-credit" href={plan.top.imageSource} target="_blank" rel="noreferrer">REAL {plan.top.name.toUpperCase()} · {plan.top.imageCredit}</a>
           </article>
+
+          <section className="coast-deck" aria-label={`${plan.top.name} coastal intelligence`}>
+            <div className="coast-deck-heading">
+              <div><p className="eyebrow dark">COASTAL INTELLIGENCE</p><h3>The whole beach, at a glance.</h3></div>
+              <div className="provenance-key"><span><i className="source-live"/> LIVE</span><span><i className="source-derived"/> DERIVED</span><span><i className="source-camera"/> DEMO CAMERA</span></div>
+            </div>
+
+            <div className="signal-grid">
+              <article className="signal-card"><span className="signal-source live">LIVE</span><small>WIND · GUSTS</small><strong>{plan.top.windSpeed} <i>kt</i></strong><p>Gusts {plan.top.gusts} kt · direction {plan.top.windDirection}°</p></article>
+              <article className="signal-card"><span className="signal-source live">LIVE</span><small>SEA STATE</small><strong>{plan.top.waveHeight.toFixed(1)} <i>m</i></strong><p>{plan.top.wavePeriod}s period · local verification advised</p></article>
+              <article className="signal-card"><span className="signal-source live">LIVE</span><small>WATER · AIR</small><strong>{plan.top.seaTemperature}° <i>water</i></strong><p>{plan.top.temperature}° air · feels {plan.top.apparentTemperature}°</p></article>
+              <article className="signal-card crowd"><span className="signal-source camera">DEMO CAMERA</span><small>CROWDING</small><strong>{plan.top.signals.crowding.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.crowding.score}%` }}/></div><p>{plan.top.signals.crowding.score}/100 · {plan.top.signals.crowding.confidence}% confidence</p></article>
+              <article className="signal-card parking"><span className="signal-source derived">DERIVED</span><small>PARKING</small><strong>{plan.top.signals.parking.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.parking.score}%` }}/></div><p>{plan.top.signals.parking.detail}</p></article>
+              <article className="signal-card posidonia"><span className="signal-source derived">DERIVED</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
+            </div>
+
+            <article className="camera-agent-card">
+              <div className="camera-orbit" aria-hidden="true"><span>◉</span><i/><i/></div>
+              <div className="camera-copy">
+                <div className="camera-title"><p className="card-label">CAMERA AGENT · 30 MIN LOOP</p><span>SIMULATED SNAPSHOT</span></div>
+                <h3>{plan.top.webcam.coverage === "direct" ? plan.top.webcam.label : `Nearest view · ${plan.top.webcam.label}`}</h3>
+                <p>In production AJÒ samples one frame every 30 minutes, removes identifiable detail, and converts the scene into typed crowding, shoreline and access signals. The current observation is a transparent demo—not a live AI claim.</p>
+                <div className="camera-facts">
+                  <span><b>LAST</b>{new Date(plan.top.signals.camera.observedAt).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</span>
+                  <span><b>NEXT</b>{new Date(plan.top.signals.camera.expiresAt).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</span>
+                  <span><b>CONFIDENCE</b>{plan.top.signals.camera.confidence}%</span>
+                  <span><b>PRIVACY</b>{plan.top.signals.camera.retention}</span>
+                </div>
+                <div className="camera-flow"><span>SNAPSHOT</span><b>→</b><span>PRIVACY FILTER</span><b>→</b><span>GPT‑5.6 VISION</span><b>→</b><span>TYPED SIGNAL</span><b>→</b><span>REPLAN</span></div>
+              </div>
+              <a className="camera-link" href={plan.top.webcam.url} target="_blank" rel="noreferrer">OPEN LIVE CAM <b>↗</b><small>{plan.top.webcam.coverage === "direct" ? "Direct beach view" : "Nearest coastal view"}</small></a>
+            </article>
+            <p className="data-note">Weather and marine values: {plan.top.source === "live" ? <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open‑Meteo live feed ↗</a> : "contest demo dataset"}. Crowd, parking and Posidonia are explainable proxies; camera vision remains simulated until scheduled ingestion is enabled.</p>
+          </section>
 
           <div className="decision-grid">
             <div className="why-card">

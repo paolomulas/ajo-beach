@@ -81,6 +81,26 @@ Demonstrate three beaches with cached conditions and one authorized/demo camera 
 
 The full AJÒ agent then turns those signals into a timed beach, sport and aperitivo itinerary, monitors the mission and replans when a signal crosses a threshold.
 
+## Implemented comparison slice
+
+The result view now reaches competitor-level situational density without copying a
+competitor interface or dataset:
+
+- live wind, gusts, direction, wave height/period, water temperature, air and apparent
+  temperature are grouped into one provenance-labelled deck;
+- crowding, parking pressure and Posidonia risk are separate, explainable derived
+  signals rather than an opaque all-purpose score;
+- every curated beach exposes a direct or explicitly labelled nearest Panoramicams
+  page;
+- the Camera Agent panel makes the 30-minute privacy-first vision loop visible, while
+  marking its current output `SIMULATED SNAPSHOT` until authorized capture and cron
+  ingestion are deployed;
+- the agent consumes these signals to preserve a mission and choose a fallback, which
+  is the product layer missing from directory-first and forecast-first competitors.
+
+This provenance split is intentional: `LIVE`, `DERIVED` and `DEMO CAMERA` must never
+be visually conflated.
+
 ## Candidate open and official inputs
 
 - Open-Meteo Marine API: waves, swell, period, direction, sea temperature and currents — <https://open-meteo.com/en/docs/marine-weather-api>

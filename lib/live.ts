@@ -5,6 +5,10 @@ import { SPOTS } from "./spots";
 type WeatherPayload = {
   current?: {
     temperature_2m?: number;
+    apparent_temperature?: number;
+    relative_humidity_2m?: number;
+    cloud_cover?: number;
+    uv_index?: number;
     wind_speed_10m?: number;
     wind_direction_10m?: number;
     wind_gusts_10m?: number;
@@ -12,7 +16,7 @@ type WeatherPayload = {
 };
 
 type MarinePayload = {
-  current?: { wave_height?: number; wave_direction?: number; wave_period?: number };
+  current?: { wave_height?: number; wave_direction?: number; wave_period?: number; sea_surface_temperature?: number };
 };
 
 type CacheEntry = { expiresAt: number; value: Record<string, Conditions> };
@@ -29,7 +33,7 @@ export async function getLiveConditions() {
   weatherUrl.search = new URLSearchParams({
     latitude,
     longitude,
-    current: "temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m",
+    current: "temperature_2m,apparent_temperature,relative_humidity_2m,cloud_cover,uv_index,wind_speed_10m,wind_direction_10m,wind_gusts_10m",
     wind_speed_unit: "kn",
     timezone: "Europe/Rome",
   }).toString();
@@ -38,7 +42,7 @@ export async function getLiveConditions() {
   marineUrl.search = new URLSearchParams({
     latitude,
     longitude,
-    current: "wave_height,wave_direction,wave_period",
+    current: "wave_height,wave_direction,wave_period,sea_surface_temperature",
     timezone: "Europe/Rome",
   }).toString();
 
@@ -61,7 +65,13 @@ export async function getLiveConditions() {
       windDirection: Math.round(w.wind_direction_10m ?? 0),
       gusts: Math.round(w.wind_gusts_10m ?? w.wind_speed_10m ?? 0),
       waveHeight: Number((m.wave_height ?? 0).toFixed(1)),
+      wavePeriod: Math.round(m.wave_period ?? 0),
       temperature: Math.round(w.temperature_2m ?? 0),
+      apparentTemperature: Math.round(w.apparent_temperature ?? w.temperature_2m ?? 0),
+      humidity: Math.round(w.relative_humidity_2m ?? 0),
+      cloudCover: Math.round(w.cloud_cover ?? 0),
+      uvIndex: Number((w.uv_index ?? 0).toFixed(1)),
+      seaTemperature: Math.round(m.sea_surface_temperature ?? 0),
       source: "live" as const,
     }];
   }));

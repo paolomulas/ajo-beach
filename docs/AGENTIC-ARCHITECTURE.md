@@ -286,6 +286,13 @@ The home screen stays outcome-first. A judge can expand **Agent Activity** to se
 This is decision evidence, not chain-of-thought. It makes the agentic implementation
 visible in the three-minute demo.
 
+The Coastal Intelligence deck also exposes the observation boundary directly in the
+product: live provider values, deterministic proxies and demo camera observations use
+different badges. The contest build links to live cameras but does not claim that a
+frame was processed. Once capture permission and scheduled ingestion are enabled, the
+same typed camera contract can replace the simulated snapshot without changing the
+planner or UI schema.
+
 ## 9. Evaluation contract
 
 Start with traces during development, then promote representative traces into a small
