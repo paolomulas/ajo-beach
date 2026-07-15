@@ -1,0 +1,172 @@
+export type Mission = "relax" | "life" | "surf" | "kite";
+
+export type Spot = {
+  id: string;
+  name: string;
+  area: string;
+  lat: number;
+  lon: number;
+  coast: "north" | "south" | "east" | "west";
+  missions: Mission[];
+  tags: string[];
+  level: "everyone" | "intermediate" | "expert";
+  exposure: number;
+  drive: number;
+  image: string;
+  note: string;
+  experience: string;
+};
+
+export const SPOTS: Spot[] = [
+  {
+    id: "solanas",
+    name: "Solanas",
+    area: "Sinnai",
+    lat: 39.136,
+    lon: 9.429,
+    coast: "south",
+    missions: ["relax"],
+    tags: ["family", "sand", "shallow", "services"],
+    level: "everyone",
+    exposure: 155,
+    drive: 48,
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85",
+    note: "Wide sandy bay with an easy family setup.",
+    experience: "Late swim · golden-hour walk · village gelato",
+  },
+  {
+    id: "mari-pintau",
+    name: "Mari Pintau",
+    area: "Quartu Sant’Elena",
+    lat: 39.172,
+    lon: 9.382,
+    coast: "south",
+    missions: ["relax"],
+    tags: ["clear-water", "snorkel", "wild"],
+    level: "everyone",
+    exposure: 160,
+    drive: 36,
+    image: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1400&q=85",
+    note: "Clear water and a wilder, pebbled shoreline.",
+    experience: "Clear-water dip · scenic coast drive · sunset viewpoint",
+  },
+  {
+    id: "su-giudeu",
+    name: "Su Giudeu",
+    area: "Chia",
+    lat: 38.891,
+    lon: 8.863,
+    coast: "south",
+    missions: ["relax", "life", "surf"],
+    tags: ["sand", "family", "iconic", "services"],
+    level: "everyone",
+    exposure: 190,
+    drive: 62,
+    image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=85",
+    note: "A broad iconic beach with room to spread out.",
+    experience: "Late beach · Chia aperitivo · lagoon at golden hour",
+  },
+  {
+    id: "poetto",
+    name: "Poetto",
+    area: "Cagliari",
+    lat: 39.2,
+    lon: 9.169,
+    coast: "south",
+    missions: ["relax", "life", "kite"],
+    tags: ["accessible", "services", "transit", "family"],
+    level: "everyone",
+    exposure: 155,
+    drive: 18,
+    image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1400&q=85",
+    note: "The urban beach: easy access, services and a quick escape.",
+    experience: "Sunset promenade · Sella del Diavolo · Marina aperitivo",
+  },
+  {
+    id: "porto-botte",
+    name: "Porto Botte",
+    area: "Giba",
+    lat: 38.944,
+    lon: 8.596,
+    coast: "west",
+    missions: ["kite"],
+    tags: ["kite", "flat-water", "wind"],
+    level: "intermediate",
+    exposure: 265,
+    drive: 74,
+    image: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1400&q=85",
+    note: "A wind-led mission for experienced riders.",
+    experience: "Lagoon light · local winery stop · Sant’Antioco evening",
+  },
+  {
+    id: "porto-pollo",
+    name: "Porto Pollo",
+    area: "Palau",
+    lat: 41.194,
+    lon: 9.324,
+    coast: "north",
+    missions: ["life", "kite", "surf"],
+    tags: ["kite", "windsurf", "schools", "wind"],
+    level: "intermediate",
+    exposure: 300,
+    drive: 190,
+    image: "https://images.unsplash.com/photo-1520443240718-fce21901db79?auto=format&fit=crop&w=1400&q=85",
+    note: "One of Sardinia’s best-known wind playgrounds.",
+    experience: "Wind session · island sunset · Palau harbour dinner",
+  },
+  {
+    id: "capo-mannu",
+    name: "Capo Mannu",
+    area: "Sinis",
+    lat: 40.047,
+    lon: 8.376,
+    coast: "west",
+    missions: ["surf"],
+    tags: ["surf", "reef", "waves", "wild"],
+    level: "expert",
+    exposure: 285,
+    drive: 108,
+    image: "https://images.unsplash.com/photo-1455729552865-3658a5d39692?auto=format&fit=crop&w=1400&q=85",
+    note: "A serious west-coast surf spot; local conditions matter.",
+    experience: "Cliff walk · west-coast sunset · Sinis dinner",
+  },
+  {
+    id: "funtanamare",
+    name: "Funtanamare",
+    area: "Gonnesa",
+    lat: 39.337,
+    lon: 8.416,
+    coast: "west",
+    missions: ["life", "surf"],
+    tags: ["surf", "sand", "waves", "sunset"],
+    level: "intermediate",
+    exposure: 275,
+    drive: 66,
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85",
+    note: "A long western beach with a strong sunset window.",
+    experience: "Sunset swim · mining coast viewpoint · Iglesias evening",
+  },
+  {
+    id: "cala-sinzias",
+    name: "Cala Sinzias",
+    area: "Castiadas",
+    lat: 39.125,
+    lon: 9.556,
+    coast: "east",
+    missions: ["relax", "life"],
+    tags: ["family", "sand", "clear-water", "services"],
+    level: "everyone",
+    exposure: 105,
+    drive: 63,
+    image: "https://images.unsplash.com/photo-1528150177508-7cc0c36cda5c?auto=format&fit=crop&w=1400&q=85",
+    note: "A bright eastern option when the west gets rough.",
+    experience: "Late swim · Costa Rei aperitivo · moonlit coast drive",
+  },
+];
+
+export const MISSION_LABELS: Record<Mission, { title: string; subtitle: string; icon: string }> = {
+  relax: { title: "Beach day", subtitle: "Calm, shade & easy water", icon: "☀" },
+  life: { title: "Beach life", subtitle: "Sunset, food & local rhythm", icon: "✦" },
+  surf: { title: "Surf", subtitle: "Find the cleanest window", icon: "≈" },
+  kite: { title: "Kitesurf", subtitle: "Wind, gusts & skill match", icon: "⌁" },
+};

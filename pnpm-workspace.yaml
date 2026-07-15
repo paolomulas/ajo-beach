@@ -1,0 +1,15 @@
+packages:
+  - "."
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - electron-to-chromium@1.5.391
+
+overrides:
+  electron-to-chromium: 1.5.391
+  openai: 6.46.0
+  ws: 8.21.0

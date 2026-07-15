@@ -1,0 +1,13 @@
+{
+  "name": "AJÒ Beach — Sardinian Beach Day Agent",
+  "short_name": "AJÒ",
+  "description": "An AI agent that plans, watches and replans your beach day in Sardinia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e6",
+  "theme_color": "#153f36",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
