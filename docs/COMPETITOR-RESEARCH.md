@@ -1,5 +1,9 @@
 # AJÒ Beach — competitor and derived-metrics research
 
+> Data boundary: competitor screens and supplied exports informed feature categories only.
+> AJÒ does not copy competitor records, report IDs, scores, database rows or catalogue
+> structure. See [DATA-SOURCES.md](./DATA-SOURCES.md).
+
 Updated: 15 July 2026
 
 For the international state-of-the-art comparison and implementation roadmap, see
