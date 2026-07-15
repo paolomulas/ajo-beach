@@ -21,7 +21,7 @@ Most beach apps answer: “Which beach has the highest score?” AJÒ answers a 
 
 The product follows a visible agent loop:
 
-1. **Observe** — understand a Relax, Surf or Kitesurf mission.
+1. **Observe** — understand a Beach day, Beach life, Explore or Water time mission.
 2. **Plan** — call a transparent ranking tool over weather, exposure, skill and travel constraints.
 3. **Act** — create a timed beach plan and departure window.
 4. **Watch** — arm a lightweight condition monitor.
@@ -37,8 +37,8 @@ The product follows a visible agent loop:
 
 ## Features
 
-- Relax, Beach Life, Surf and Kitesurf mission profiles
-- Sardinian spot shortlist with transparent mission-fit score
+- Beach day, Beach Life, Explore and Water time mission profiles
+- 293 Sardinian discovery beaches with transparent mission-fit score
 - Coastal Intelligence deck with live wind/gusts, sea state, water/air temperature, UV-ready weather fields and clear provenance labels
 - Interactive, offline-safe Sardinia explorer with geographically positioned beach markers, mission filters, real photography and webcam shortcuts
 - Privacy-preserving browser geolocation that selects the nearest curated beach without sending coordinates to the model
@@ -51,7 +51,7 @@ The product follows a visible agent loop:
 - Skill, accessibility, family and drive-time constraints
 - GPT‑5.6 function calling and visible agent activity
 - Versioned weather watch and a real one-tap replan endpoint
-- Visible trace ID, request count and token usage (decision evidence, not chain-of-thought)
+- Bounded decision evidence and safety labels (never hidden chain-of-thought)
 - Daily run cap, per-mission cooldown, cache and deterministic recovery
 - Installable PWA with offline shell and notifications
 - Responsive mobile-first interface
@@ -79,7 +79,7 @@ pnpm start
 
 ## Safety and scope
 
-AJÒ is a contest prototype. Forecasts and sport suitability are indicative, not safety guarantees. Surf and kitesurf users must verify conditions with local schools, authorities and official notices. The included spot dataset is deliberately small and editorially curated for the demo.
+AJÒ is a contest prototype. Forecasts and activity suitability are indicative, not safety guarantees. Water activities must be verified with local operators, authorities and official notices. The demo combines a 293-beach discovery catalogue with nine deeper, live-ready coastal guides.
 
 ## Stack
 

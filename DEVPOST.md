@@ -42,7 +42,7 @@ in the public repository with their provenance, confidence and safety boundaries
 
 ## What it does
 
-The user gives AJÒ a mission: a relaxed family beach day, a beach-to-sunset local experience, a surf window or a kitesurf session. AJÒ evaluates travel time, skill, accessibility, wind, gusts, waves and coast exposure. It creates a timed plan, explains the decision and arms a condition watch. When conditions change, it proposes a new spot while preserving the original constraints.
+The user gives AJÒ a mission: a relaxed family beach day, a beach-to-sunset local experience, a coastal exploration day or a water-time plan. AJÒ evaluates travel time, accessibility, wind, gusts, waves and coast exposure. It creates a timed plan, explains the decision and arms a condition watch. When conditions change, it proposes a new spot while preserving the original constraints.
 
 The app is a mobile-first PWA, works in credit-saver demo mode and exposes a Live GPT‑5.6 mode for the judged agent path.
 
@@ -118,7 +118,7 @@ observations and official safety information visually and technically distinct.
 ## Accomplishments
 
 - A complete agent loop in a coherent mobile product
-- Relax, Surf and Kitesurf missions with explicit skill constraints
+- Beach day, Beach life, Explore and Water time missions with explicit constraints
 - Bounded OpenAI Agents SDK loop with strict GPT‑5.6 tool calling
 - Installable and offline-capable PWA
 - Versioned replanning, trace/usage telemetry and notifications
