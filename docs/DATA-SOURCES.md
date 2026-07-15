@@ -2,12 +2,15 @@
 
 ## Discovery catalogue
 
-AJÒ's broad discovery layer contains named beach POIs from OpenStreetMap. OpenStreetMap
-data is available under the Open Database License (ODbL); the product displays visible
+AJÒ's broad discovery layer contains 293 named beach POIs. 276 have direct OpenStreetMap
+records; 17 have public geographic cross-checks where the OSM name uses a different local
+spelling. OpenStreetMap data is available under the Open Database License (ODbL); the product displays visible
 attribution and links every discovery card back to the map. The discovery layer provides
 names and coordinates only. It does not claim live beach conditions.
 
-- Source: https://www.openstreetmap.org/copyright
+- Primary source: https://www.openstreetmap.org/copyright
+- Public cross-checks: SardegnaTurismo, municipal pages and public cartographic directories;
+  these are used for coordinates only, never for competitor reports or scores.
 - Map verification: each POI opens at its recorded latitude and longitude.
 - UI label: `OPEN DISCOVERY CATALOGUE`.
 

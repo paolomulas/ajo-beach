@@ -67,13 +67,13 @@ export function BeachMap({ spots, mission, onMissionChange }: { spots: Spot[]; m
   return (
     <section className="map-explorer" aria-label="Explore Sardinian beaches on the map">
       <div className="map-heading">
-        <div><p className="eyebrow dark">52 BEACHES · 9 COMPLETE GUIDES</p><h2>The whole island, one glance.</h2><p className="map-subtitle">Colours show how well each beach matches your day. Open a gold-ringed beach for the complete picture.</p></div>
+        <div><p className="eyebrow dark">{DISCOVERY_BEACHES.length} BEACHES · 9 COMPLETE GUIDES</p><h2>The whole island, one glance.</h2><p className="map-subtitle">Colours show how well each beach matches your day. Open a gold-ringed beach for the complete picture.</p></div>
         <div className="map-filters" aria-label="Filter beaches by mission">
           {(Object.keys(MISSION_LABELS) as Mission[]).map((item) => <button key={item} className={mission === item ? "active" : ""} onClick={() => onMissionChange(item)}>{MISSION_LABELS[item].title}</button>)}
         </div>
       </div>
       <div className="zone-filters" aria-label="Browse popular Sardinian zones">
-        <button className={showAll ? "active" : ""} onClick={() => setShowAll(!showAll)}>{showAll ? "All 52" : "9 complete guides"}</button>
+        <button className={showAll ? "active" : ""} onClick={() => setShowAll(!showAll)}>{showAll ? `All ${DISCOVERY_BEACHES.length}` : "9 complete guides"}</button>
         {POPULAR_ZONES.map((zone) => <button key={zone} onClick={() => selectZone(zone)}>{zone}</button>)}
       </div>
       <div className="map-stage">

@@ -3,7 +3,7 @@ import { DISCOVERY_BEACHES, discoveryFit, osmMapUrl } from "../lib/discovery-cat
 
 describe("open beach discovery catalogue", () => {
   it("adds meaningful island coverage without duplicate identifiers", () => {
-    expect(DISCOVERY_BEACHES.length).toBeGreaterThanOrEqual(40);
+    expect(DISCOVERY_BEACHES.length).toBe(293);
     expect(new Set(DISCOVERY_BEACHES.map((beach) => beach.id)).size).toBe(DISCOVERY_BEACHES.length);
     expect(new Set(DISCOVERY_BEACHES.map((beach) => beach.coast))).toEqual(new Set(["north", "south", "east", "west"]));
   });
@@ -14,7 +14,7 @@ describe("open beach discovery catalogue", () => {
       expect(beach.lat).toBeLessThanOrEqual(41.35);
       expect(beach.lon).toBeGreaterThanOrEqual(8.05);
       expect(beach.lon).toBeLessThanOrEqual(9.85);
-      expect(beach.source).toBe("OpenStreetMap");
+      expect(["OpenStreetMap", "Public coordinate cross-check"]).toContain(beach.source);
       expect(osmMapUrl(beach)).toContain("openstreetmap.org");
     }
   });

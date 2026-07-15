@@ -1,0 +1,2639 @@
+[
+  {
+    "id": "cea",
+    "name": "Cea",
+    "lat": 39.8639843,
+    "lon": 9.6843163,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/4453695456"
+  },
+  {
+    "id": "sas-linnas-siccas",
+    "name": "Sas Linnas Siccas",
+    "lat": 40.4177734,
+    "lon": 9.7712351,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/81645136"
+  },
+  {
+    "id": "sa-petra-ruja",
+    "name": "Sa Petra Ruja",
+    "lat": 40.5853407,
+    "lon": 9.7649922,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/71908636"
+  },
+  {
+    "id": "furcadizzu",
+    "name": "Furcadizzu",
+    "lat": 39.0134863,
+    "lon": 9.0246816,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/978432496"
+  },
+  {
+    "id": "san-nicolo-buggerru",
+    "name": "San Nicolo Buggerru",
+    "lat": 39.4192477,
+    "lon": 8.4120097,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/294611285"
+  },
+  {
+    "id": "cala-lupo",
+    "name": "Cala Lupo",
+    "lat": 40.9483486,
+    "lon": 8.2344287,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/425347179"
+  },
+  {
+    "id": "cala-lunga-maddalena",
+    "name": "Cala Lunga Maddalena",
+    "lat": 41.2574704,
+    "lon": 9.4247053,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/443479668"
+  },
+  {
+    "id": "san-pietro-a-mare",
+    "name": "San Pietro A Mare",
+    "lat": 40.9286634,
+    "lon": 8.8007156,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/475965264"
+  },
+  {
+    "id": "la-marinedda",
+    "name": "La Marinedda",
+    "lat": 41.0159227,
+    "lon": 8.8881953,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117078635"
+  },
+  {
+    "id": "solanas",
+    "name": "Solanas",
+    "lat": 39.1332589,
+    "lon": 9.4313764,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/142006632"
+  },
+  {
+    "id": "porto-alabe",
+    "name": "Porto Alabe",
+    "lat": 40.2452416,
+    "lon": 8.474674,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/131050205"
+  },
+  {
+    "id": "s-ortixeddu",
+    "name": "S Ortixeddu",
+    "lat": 38.9213471,
+    "lon": 8.7062935,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/722760805"
+  },
+  {
+    "id": "su-pallosu",
+    "name": "Su Pallosu",
+    "lat": 40.0502175,
+    "lon": 8.4030256,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1416158831"
+  },
+  {
+    "id": "sa-prama",
+    "name": "Sa Prama",
+    "lat": 40.4401043,
+    "lon": 9.7817579,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1472590940"
+  },
+  {
+    "id": "salina-bamba",
+    "name": "Salina Bamba",
+    "lat": 40.8373793,
+    "lon": 9.6980502,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/512868131"
+  },
+  {
+    "id": "osalla",
+    "name": "Osalla",
+    "lat": 40.3311219,
+    "lon": 9.6705716,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/229544721"
+  },
+  {
+    "id": "san-giovanni-posada",
+    "name": "San Giovanni Posada",
+    "lat": 40.6340821,
+    "lon": 9.7413715,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/123908205"
+  },
+  {
+    "id": "cala-d-ambra",
+    "name": "Cala D Ambra",
+    "lat": 40.7677422,
+    "lon": 9.6856576,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/185812126"
+  },
+  {
+    "id": "cardellino-maddalena",
+    "name": "Cardellino Maddalena",
+    "lat": 41.2541247,
+    "lon": 9.413726,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119734972"
+  },
+  {
+    "id": "cala-soraya",
+    "name": "Cala Soraya",
+    "lat": 41.2314077,
+    "lon": 9.3510101,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "foxi-manna",
+    "name": "Foxi Manna",
+    "lat": 39.6943644,
+    "lon": 9.6589013,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/116050136"
+  },
+  {
+    "id": "rena-di-ponente",
+    "name": "Rena Di Ponente",
+    "lat": 41.2343062,
+    "lon": 9.1627888,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117671463"
+  },
+  {
+    "id": "tavolara",
+    "name": "Tavolara",
+    "lat": 40.9077866,
+    "lon": 9.7170299,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/15665385"
+  },
+  {
+    "id": "compoltitu",
+    "name": "Compoltitu",
+    "lat": 40.3211657,
+    "lon": 8.4541196,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "porto-pozzo",
+    "name": "Porto Pozzo",
+    "lat": 41.1941984,
+    "lon": 9.2726524,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1237932865"
+  },
+  {
+    "id": "cala-fuili",
+    "name": "Cala Fuili",
+    "lat": 40.2560655,
+    "lon": 9.6248824,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/102793641"
+  },
+  {
+    "id": "marina-di-gairo",
+    "name": "Marina Di Gairo",
+    "lat": 39.7687806,
+    "lon": 9.6136846,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/297879356"
+  },
+  {
+    "id": "perd-e-sali",
+    "name": "Perd E Sali",
+    "lat": 39.0305024,
+    "lon": 9.0314987,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/27765091"
+  },
+  {
+    "id": "punta-molentis",
+    "name": "Punta Molentis",
+    "lat": 39.1336239,
+    "lon": 9.5563807,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119617561"
+  },
+  {
+    "id": "cala-ostia",
+    "name": "Cala Ostia",
+    "lat": 38.9586668,
+    "lon": 8.9707139,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/856517395"
+  },
+  {
+    "id": "rena-majore",
+    "name": "Rena Majore",
+    "lat": 41.1688694,
+    "lon": 9.1687735,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119020437"
+  },
+  {
+    "id": "tramariglio",
+    "name": "Tramariglio",
+    "lat": 40.5944641,
+    "lon": 8.1649577,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1014569626"
+  },
+  {
+    "id": "su-portu",
+    "name": "Su Portu",
+    "lat": 39.6780711,
+    "lon": 8.4469324,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/534207910"
+  },
+  {
+    "id": "conca-verde",
+    "name": "Conca Verde",
+    "lat": 41.2138891,
+    "lon": 9.276607,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/525793505"
+  },
+  {
+    "id": "spiaggia-del-riso",
+    "name": "Spiaggia Del Riso",
+    "lat": 39.1205873,
+    "lon": 9.509791,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/232818649"
+  },
+  {
+    "id": "funtanamare",
+    "name": "Funtanamare",
+    "lat": 39.337,
+    "lon": 8.416,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "portu-s-ilixi",
+    "name": "Portu S Ilixi",
+    "lat": 39.3119093,
+    "lon": 9.612247,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117783845"
+  },
+  {
+    "id": "lu-litarroni",
+    "name": "Lu Litarroni",
+    "lat": 41.1391935,
+    "lon": 9.1154293,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/129868987"
+  },
+  {
+    "id": "cala-dei-ginepri",
+    "name": "Cala Dei Ginepri",
+    "lat": 40.9498924,
+    "lon": 8.2216684,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/356782069"
+  },
+  {
+    "id": "marritza",
+    "name": "Marritza",
+    "lat": 40.8489152,
+    "lon": 8.6069511,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1837537387"
+  },
+  {
+    "id": "costa-dorata",
+    "name": "Costa Dorata",
+    "lat": 40.8679702,
+    "lon": 9.6512904,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1819550874"
+  },
+  {
+    "id": "rena-bianca",
+    "name": "Rena Bianca",
+    "lat": 41.0466718,
+    "lon": 9.5239032,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/140375006"
+  },
+  {
+    "id": "la-pelosa",
+    "name": "La Pelosa",
+    "lat": 40.9652807,
+    "lon": 8.2096592,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/94389477"
+  },
+  {
+    "id": "cala-dei-francesi",
+    "name": "Cala Dei Francesi",
+    "lat": 40.7457921,
+    "lon": 9.7118321,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/148282097"
+  },
+  {
+    "id": "valle-erica",
+    "name": "Valle Erica",
+    "lat": 41.2307269,
+    "lon": 9.2739953,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/118979160"
+  },
+  {
+    "id": "principe",
+    "name": "Principe",
+    "lat": 41.089162,
+    "lon": 9.5614982,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72891101"
+  },
+  {
+    "id": "lido-alghero",
+    "name": "Lido Alghero",
+    "lat": 40.5717803,
+    "lon": 8.31772,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/309383924"
+  },
+  {
+    "id": "santa-caterina",
+    "name": "Santa Caterina",
+    "lat": 39.1059875,
+    "lon": 9.518419,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/142108353"
+  },
+  {
+    "id": "spiaggia-rosa",
+    "name": "Spiaggia Rosa",
+    "lat": 41.2793307,
+    "lon": 9.3561025,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117804137"
+  },
+  {
+    "id": "s-arena-scoada",
+    "name": "Sâ€™Arena Scoada",
+    "lat": 40.0168287,
+    "lon": 8.4145898,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/178636775"
+  },
+  {
+    "id": "torre-chia",
+    "name": "Torre Chia",
+    "lat": 38.895297,
+    "lon": 8.884939,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/169427607"
+  },
+  {
+    "id": "bosa-marina",
+    "name": "Bosa Marina",
+    "lat": 40.2873537,
+    "lon": 8.4810168,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/19047586"
+  },
+  {
+    "id": "cala-goloritze",
+    "name": "Cala GoloritzÃ¨",
+    "lat": 40.1080702,
+    "lon": 9.6896029,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "punta-negra",
+    "name": "Punta Negra",
+    "lat": 40.593574,
+    "lon": 8.2764495,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/515232371"
+  },
+  {
+    "id": "porto-pinetto",
+    "name": "Porto Pinetto",
+    "lat": 38.9638719,
+    "lon": 8.5894262,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/235363898"
+  },
+  {
+    "id": "san-diego",
+    "name": "San Diego",
+    "lat": 40.8774219,
+    "lon": 9.6526719,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/321810922"
+  },
+  {
+    "id": "lu-impostu",
+    "name": "Lu Impostu",
+    "lat": 40.8250911,
+    "lon": 9.6805667,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/102783330"
+  },
+  {
+    "id": "il-gabbiano",
+    "name": "Il Gabbiano",
+    "lat": 40.9609951,
+    "lon": 8.2127484,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/371729601"
+  },
+  {
+    "id": "punta-est",
+    "name": "Punta Est",
+    "lat": 40.8774219,
+    "lon": 9.6526719,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/321810922"
+  },
+  {
+    "id": "buggerru",
+    "name": "Buggerru",
+    "lat": 39.3730918,
+    "lon": 8.3807295,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/81204119"
+  },
+  {
+    "id": "cartoe",
+    "name": "Cartoe",
+    "lat": 40.324374,
+    "lon": 9.6711721,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/229819847"
+  },
+  {
+    "id": "berchida",
+    "name": "Berchida",
+    "lat": 40.4818778,
+    "lon": 9.8055039,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1667008674"
+  },
+  {
+    "id": "porto-pollo",
+    "name": "Porto Pollo",
+    "lat": 41.1836466,
+    "lon": 9.3243739,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/453234340"
+  },
+  {
+    "id": "museddu",
+    "name": "Museddu",
+    "lat": 39.7893333,
+    "lon": 9.6702309,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/10316962170"
+  },
+  {
+    "id": "tancau",
+    "name": "Tancau",
+    "lat": 39.980082,
+    "lon": 9.6866606,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/120609572"
+  },
+  {
+    "id": "marina-di-orosei",
+    "name": "Marina Di Orosei",
+    "lat": 40.3711139,
+    "lon": 9.7235226,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/81645135"
+  },
+  {
+    "id": "cala-pira",
+    "name": "Cala Pira",
+    "lat": 39.1723462,
+    "lon": 9.5708503,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/236827819"
+  },
+  {
+    "id": "spiaggia-arbatax",
+    "name": "Spiaggia Arbatax",
+    "lat": 39.9434258,
+    "lon": 9.6898626,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119426028"
+  },
+  {
+    "id": "san-gemiliano",
+    "name": "San Gemiliano",
+    "lat": 39.9247661,
+    "lon": 9.6992853,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/4393172309"
+  },
+  {
+    "id": "porto-ottiolu",
+    "name": "Porto Ottiolu",
+    "lat": 40.737377,
+    "lon": 9.7104175,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/28060855"
+  },
+  {
+    "id": "calamosca",
+    "name": "Calamosca",
+    "lat": 39.187017,
+    "lon": 9.152223,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1683452042"
+  },
+  {
+    "id": "santa-maria-navarrese",
+    "name": "Santa Maria Navarrese",
+    "lat": 39.9871979,
+    "lon": 9.6889161,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/256509564"
+  },
+  {
+    "id": "cala-fighera",
+    "name": "Cala Fighera",
+    "lat": 39.1831029,
+    "lon": 9.1622623,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1113338468"
+  },
+  {
+    "id": "kalamoresca",
+    "name": "Kalamoresca",
+    "lat": 40.9875,
+    "lon": 9.64684,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "cala-dragunara",
+    "name": "Cala Dragunara",
+    "lat": 40.5760511,
+    "lon": 8.1609903,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/431560597"
+  },
+  {
+    "id": "cala-tinnari",
+    "name": "Cala Tinnari",
+    "lat": 41.0339098,
+    "lon": 8.919419,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119945138"
+  },
+  {
+    "id": "cala-domestica",
+    "name": "Cala Domestica",
+    "lat": 39.3736601,
+    "lon": 8.3806858,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/2817567002"
+  },
+  {
+    "id": "barrabisa",
+    "name": "Barrabisa",
+    "lat": 41.1798125,
+    "lon": 9.3206112,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/453234341"
+  },
+  {
+    "id": "cala-sarraina",
+    "name": "Cala Sarraina",
+    "lat": 41.08724,
+    "lon": 8.98406,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "la-caletta-carloforte",
+    "name": "La Caletta Carloforte",
+    "lat": 39.1176357,
+    "lon": 8.2593931,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/7902821596"
+  },
+  {
+    "id": "san-giovanni-muravera",
+    "name": "San Giovanni Muravera",
+    "lat": 39.3952802,
+    "lon": 9.6104005,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/5470881303"
+  },
+  {
+    "id": "sa-mesa-longa",
+    "name": "Sa Mesa Longa",
+    "lat": 40.045935,
+    "lon": 8.3988543,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/178637431"
+  },
+  {
+    "id": "li-cucutti",
+    "name": "Li Cucutti",
+    "lat": 40.7278886,
+    "lon": 9.7160988,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/10793096077"
+  },
+  {
+    "id": "la-marmorata",
+    "name": "La Marmorata",
+    "lat": 41.2483532,
+    "lon": 9.2350694,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/146956220"
+  },
+  {
+    "id": "pistis",
+    "name": "Pistis",
+    "lat": 39.7000525,
+    "lon": 8.4557902,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/2446988685"
+  },
+  {
+    "id": "cala-zafferano",
+    "name": "Cala Zafferano",
+    "lat": 38.8976564,
+    "lon": 8.6526677,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "la-liccia",
+    "name": "La Liccia",
+    "lat": 41.1811469,
+    "lon": 9.1782226,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/123564552"
+  },
+  {
+    "id": "santa-lucia",
+    "name": "Santa Lucia",
+    "lat": 40.5853407,
+    "lon": 9.7649922,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/71908636"
+  },
+  {
+    "id": "turas",
+    "name": "Turas",
+    "lat": 40.2729191,
+    "lon": 8.4842475,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/116692366"
+  },
+  {
+    "id": "is-solinas",
+    "name": "Is Solinas",
+    "lat": 39.0255455,
+    "lon": 8.5957936,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1824372790"
+  },
+  {
+    "id": "mari-pintau",
+    "name": "Mari Pintau",
+    "lat": 39.1727698,
+    "lon": 9.3721526,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/179174889"
+  },
+  {
+    "id": "sos-dorroles",
+    "name": "Sos Dorroles",
+    "lat": 40.2752987,
+    "lon": 9.6286681,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/42864610"
+  },
+  {
+    "id": "sa-rocca-tunda",
+    "name": "Sa Rocca Tunda",
+    "lat": 40.0401396,
+    "lon": 8.4159275,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1291489398"
+  },
+  {
+    "id": "porto-managu",
+    "name": "Porto Managu",
+    "lat": 40.3374007,
+    "lon": 8.4218856,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/275573419"
+  },
+  {
+    "id": "nora",
+    "name": "Nora",
+    "lat": 38.9844229,
+    "lon": 9.0163754,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/41180949"
+  },
+  {
+    "id": "burantin",
+    "name": "Burantin",
+    "lat": 40.51,
+    "lon": 8.322,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "piscinas",
+    "name": "Piscinas",
+    "lat": 39.074431,
+    "lon": 8.665938,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/39782"
+  },
+  {
+    "id": "scoglio-peppino",
+    "name": "Scoglio Peppino",
+    "lat": 39.2368008,
+    "lon": 9.5721473,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/276461638"
+  },
+  {
+    "id": "petra-ruja",
+    "name": "Petra Ruja",
+    "lat": 40.5853407,
+    "lon": 9.7649922,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/71908636"
+  },
+  {
+    "id": "porto-rafael",
+    "name": "Porto Rafael",
+    "lat": 41.1931667,
+    "lon": 9.3645473,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/13073966992"
+  },
+  {
+    "id": "torre-del-porticciolo",
+    "name": "Torre Del Porticciolo",
+    "lat": 40.6440674,
+    "lon": 8.1864713,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/329177191"
+  },
+  {
+    "id": "cava-usai",
+    "name": "Cava Usai",
+    "lat": 39.1070803,
+    "lon": 9.5186968,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/12917663457"
+  },
+  {
+    "id": "cala-granu",
+    "name": "Cala Granu",
+    "lat": 41.1460632,
+    "lon": 9.5262055,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/140367908"
+  },
+  {
+    "id": "quinta-spiaggia",
+    "name": "Quinta Spiaggia",
+    "lat": 41.0012429,
+    "lon": 9.6081168,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/228552761"
+  },
+  {
+    "id": "piscinni",
+    "name": "Piscinni",
+    "lat": 38.912375,
+    "lon": 8.7815511,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/156979622"
+  },
+  {
+    "id": "monte-cogoni",
+    "name": "Monte Cogoni",
+    "lat": 38.89407,
+    "lon": 8.877223,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "cala-relitto",
+    "name": "Cala Relitto",
+    "lat": 41.2084,
+    "lon": 9.4247,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "marina-di-arborea",
+    "name": "Marina Di Arborea",
+    "lat": 39.8020592,
+    "lon": 8.5499177,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/578678830"
+  },
+  {
+    "id": "frutti-d-oro",
+    "name": "Frutti D Oro",
+    "lat": 39.1427696,
+    "lon": 9.0130875,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/7741451485"
+  },
+  {
+    "id": "portopaglietto",
+    "name": "Portopaglietto",
+    "lat": 39.2093812,
+    "lon": 8.3746431,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/137085081"
+  },
+  {
+    "id": "cala-regina",
+    "name": "Cala Regina",
+    "lat": 39.1790787,
+    "lon": 9.3547756,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/355430561"
+  },
+  {
+    "id": "porto-palmas",
+    "name": "Porto Palmas",
+    "lat": 40.7486769,
+    "lon": 8.1574322,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/293295181"
+  },
+  {
+    "id": "cala-sabina",
+    "name": "Cala Sabina",
+    "lat": 41.010811,
+    "lon": 9.5877339,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/259430562"
+  },
+  {
+    "id": "le-bombarde",
+    "name": "Le Bombarde",
+    "lat": 40.5839752,
+    "lon": 8.2552781,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/18666667"
+  },
+  {
+    "id": "mugoni",
+    "name": "Mugoni",
+    "lat": 40.6166074,
+    "lon": 8.2063912,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/279266341"
+  },
+  {
+    "id": "simius",
+    "name": "Simius",
+    "lat": 39.1251104,
+    "lon": 9.5269803,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/141865544"
+  },
+  {
+    "id": "marina-di-sorso",
+    "name": "Marina Di Sorso",
+    "lat": 40.8289846,
+    "lon": 8.5541943,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/12758066630"
+  },
+  {
+    "id": "le-saline-calasetta",
+    "name": "Le Saline Calasetta",
+    "lat": 39.0975826,
+    "lon": 8.359789,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/118073414"
+  },
+  {
+    "id": "la-licciola",
+    "name": "La Licciola",
+    "lat": 41.2302582,
+    "lon": 9.2741577,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/453381789"
+  },
+  {
+    "id": "liscia-di-vacca",
+    "name": "Liscia Di Vacca",
+    "lat": 41.1359649,
+    "lon": 9.5159121,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1915832864"
+  },
+  {
+    "id": "cala-mariolu",
+    "name": "Cala Mariolu",
+    "lat": 40.1233317,
+    "lon": 9.676703,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/184754084"
+  },
+  {
+    "id": "la-celvia",
+    "name": "La Celvia",
+    "lat": 41.0813693,
+    "lon": 9.5475502,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/140233512"
+  },
+  {
+    "id": "costa-rei",
+    "name": "Costa Rei",
+    "lat": 39.2560813,
+    "lon": 9.575808,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/4428114733"
+  },
+  {
+    "id": "terza-spiaggia",
+    "name": "Terza Spiaggia",
+    "lat": 41.003377,
+    "lon": 9.6110002,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/260140133"
+  },
+  {
+    "id": "cala-sinzias",
+    "name": "Cala Sinzias",
+    "lat": 39.196432,
+    "lon": 9.5626757,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/236974449"
+  },
+  {
+    "id": "porto-liscia",
+    "name": "Porto Liscia",
+    "lat": 41.1872773,
+    "lon": 9.3037448,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/2896980894"
+  },
+  {
+    "id": "ampurias",
+    "name": "Ampurias",
+    "lat": 40.9050699,
+    "lon": 8.6882725,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/6799474887"
+  },
+  {
+    "id": "guidi",
+    "name": "Guidi",
+    "lat": 39.1692417,
+    "lon": 8.2648051,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1023968608"
+  },
+  {
+    "id": "cala-coticcio",
+    "name": "Cala Coticcio",
+    "lat": 41.2180515,
+    "lon": 9.4858582,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/73545697"
+  },
+  {
+    "id": "musculedda",
+    "name": "Musculedda",
+    "lat": 39.8911404,
+    "lon": 9.6812147,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119466752"
+  },
+  {
+    "id": "maladroxia",
+    "name": "Maladroxia",
+    "lat": 38.998991,
+    "lon": 8.4488481,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/135734631"
+  },
+  {
+    "id": "cala-granara-spargi",
+    "name": "Cala Granara Spargi",
+    "lat": 41.235036,
+    "lon": 9.354384,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "capriccioli",
+    "name": "Capriccioli",
+    "lat": 41.0814308,
+    "lon": 9.5336488,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/121747810"
+  },
+  {
+    "id": "rena-di-levante-capo-testa",
+    "name": "Rena Di Levante Capo Testa",
+    "lat": 41.235829,
+    "lon": 9.1615206,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/157362171"
+  },
+  {
+    "id": "ziu-martine",
+    "name": "Ziu Martine",
+    "lat": 40.2603691,
+    "lon": 9.6257809,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/394445334"
+  },
+  {
+    "id": "cala-sassari",
+    "name": "Cala Sassari",
+    "lat": 40.9954435,
+    "lon": 9.5907473,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/23965368"
+  },
+  {
+    "id": "piscina-rei",
+    "name": "Piscina Rei",
+    "lat": 39.2651487,
+    "lon": 9.5818865,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/397403057"
+  },
+  {
+    "id": "sottotorre-calasetta",
+    "name": "Sottotorre Calasetta",
+    "lat": 39.0985008,
+    "lon": 8.3642354,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1159138979"
+  },
+  {
+    "id": "cala-luna",
+    "name": "Cala Luna",
+    "lat": 40.2264753,
+    "lon": 9.6259242,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/121851468"
+  },
+  {
+    "id": "su-giudeu",
+    "name": "Su Giudeu",
+    "lat": 38.8840142,
+    "lon": 8.8634758,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/139116963"
+  },
+  {
+    "id": "lido-del-sole-olbia",
+    "name": "Lido Del Sole Olbia",
+    "lat": 40.9153669,
+    "lon": 9.5650175,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1820224611"
+  },
+  {
+    "id": "spiaggia-li-cuncheddi",
+    "name": "Spiaggia Li Cuncheddi",
+    "lat": 40.9107202,
+    "lon": 9.6064644,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/220309734"
+  },
+  {
+    "id": "capo-comino",
+    "name": "Capo Comino",
+    "lat": 40.535383,
+    "lon": 9.7921685,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/259875086"
+  },
+  {
+    "id": "sassu",
+    "name": "Sassu",
+    "lat": 39.7591203,
+    "lon": 8.575557,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/339107271"
+  },
+  {
+    "id": "porto-istana",
+    "name": "Porto Istana",
+    "lat": 40.8920731,
+    "lon": 9.6148245,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/185793841"
+  },
+  {
+    "id": "sassi-piatti",
+    "name": "Sassi Piatti",
+    "lat": 39.1893255,
+    "lon": 8.3209212,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1165775241"
+  },
+  {
+    "id": "la-cinta",
+    "name": "La Cinta",
+    "lat": 40.7952107,
+    "lon": 9.669953,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/102780629"
+  },
+  {
+    "id": "portixeddu",
+    "name": "Portixeddu",
+    "lat": 39.4434907,
+    "lon": 8.4060571,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/361777290"
+  },
+  {
+    "id": "bassa-trinita-maddalena",
+    "name": "Bassa Trinita Maddalena",
+    "lat": 41.2415276,
+    "lon": 9.3991698,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119734970"
+  },
+  {
+    "id": "porto-corallo",
+    "name": "Porto Corallo",
+    "lat": 39.4340384,
+    "lon": 9.6313537,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117038320"
+  },
+  {
+    "id": "ezzi-mannu",
+    "name": "Ezzi Mannu",
+    "lat": 40.8752067,
+    "lon": 8.2609925,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/961984950"
+  },
+  {
+    "id": "su-tiriarzu",
+    "name": "Su Tiriarzu",
+    "lat": 40.6340821,
+    "lon": 9.7413715,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/123908205"
+  },
+  {
+    "id": "torre-grande",
+    "name": "Torre Grande",
+    "lat": 39.9067052,
+    "lon": 8.5162509,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72444953"
+  },
+  {
+    "id": "santa-margherita-pula",
+    "name": "Santa Margherita Pula",
+    "lat": 38.9586668,
+    "lon": 8.9707139,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/856517395"
+  },
+  {
+    "id": "cala-monte-turno",
+    "name": "Cala Monte Turno",
+    "lat": 39.207752,
+    "lon": 9.5649789,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "cala-portese",
+    "name": "Cala Portese",
+    "lat": 41.1837722,
+    "lon": 9.463894,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/73541449"
+  },
+  {
+    "id": "lu-bagnu",
+    "name": "Lu Bagnu",
+    "lat": 40.9037655,
+    "lon": 8.6847975,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/381218002"
+  },
+  {
+    "id": "spiaggia-delle-vacche",
+    "name": "Spiaggia Delle Vacche",
+    "lat": 40.8584035,
+    "lon": 9.6734115,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1094569251"
+  },
+  {
+    "id": "coaquaddus",
+    "name": "Coaquaddus",
+    "lat": 38.9819081,
+    "lon": 8.4433971,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/135667112"
+  },
+  {
+    "id": "malfatano",
+    "name": "Malfatano",
+    "lat": 38.8843696,
+    "lon": 8.8019973,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/3685725912"
+  },
+  {
+    "id": "la-speranza",
+    "name": "La Speranza",
+    "lat": 39.1014831,
+    "lon": 8.5769693,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/448333475"
+  },
+  {
+    "id": "porto-paglia",
+    "name": "Porto Paglia",
+    "lat": 39.2689604,
+    "lon": 8.4251765,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/14458466"
+  },
+  {
+    "id": "strangolato",
+    "name": "Strangolato",
+    "lat": 41.2575573,
+    "lon": 9.4045869,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/444480193"
+  },
+  {
+    "id": "le-tonnare",
+    "name": "Le Tonnare",
+    "lat": 40.9177449,
+    "lon": 8.2320487,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/445292292"
+  },
+  {
+    "id": "punta-negra-alghero",
+    "name": "Punta Negra Alghero",
+    "lat": 40.593574,
+    "lon": 8.2764495,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/515232371"
+  },
+  {
+    "id": "spiaggia-sciumara",
+    "name": "Spiaggia Sciumara",
+    "lat": 41.183377,
+    "lon": 9.3746861,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72074993"
+  },
+  {
+    "id": "coccorrocci",
+    "name": "Coccorrocci",
+    "lat": 39.7253998,
+    "lon": 9.6750876,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/121380768"
+  },
+  {
+    "id": "bidderosa",
+    "name": "Biderosa",
+    "lat": 40.4575799,
+    "lon": 9.8005507,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/82378752"
+  },
+  {
+    "id": "marinella",
+    "name": "Marinella",
+    "lat": 40.9991643,
+    "lon": 9.5536014,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1324015802"
+  },
+  {
+    "id": "porto-botte",
+    "name": "Porto Botte",
+    "lat": 39.0413136,
+    "lon": 8.5692767,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1308265597"
+  },
+  {
+    "id": "agrustos",
+    "name": "Agrustos",
+    "lat": 40.7058093,
+    "lon": 9.7168694,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/102784793"
+  },
+  {
+    "id": "spiaggia-budoni",
+    "name": "Spiaggia Budoni",
+    "lat": 40.6992656,
+    "lon": 9.7237499,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/5846987102"
+  },
+  {
+    "id": "campulongu",
+    "name": "Campulongu",
+    "lat": 39.1274448,
+    "lon": 9.5076393,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/367206115"
+  },
+  {
+    "id": "cala-inferno",
+    "name": "Cala Inferno",
+    "lat": 40.6291523,
+    "lon": 8.1636129,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/699287930"
+  },
+  {
+    "id": "portu-maga",
+    "name": "Portu Maga",
+    "lat": 39.575498,
+    "lon": 8.4674745,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1814777419"
+  },
+  {
+    "id": "santa-reparata",
+    "name": "Santa Reparata",
+    "lat": 41.2296346,
+    "lon": 9.1674665,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/157362172"
+  },
+  {
+    "id": "cala-ginepro",
+    "name": "Cala Ginepro",
+    "lat": 40.4471291,
+    "lon": 9.7936534,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/229770383"
+  },
+  {
+    "id": "platamona",
+    "name": "Platamona",
+    "lat": 40.8183003,
+    "lon": 8.4631656,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1837537394"
+  },
+  {
+    "id": "is-arenas-narbolia",
+    "name": "Is Arenas Narbolia",
+    "lat": 40.0663857,
+    "lon": 8.4752365,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/113749019"
+  },
+  {
+    "id": "cala-banana",
+    "name": "Cala Banana",
+    "lat": 40.9603243,
+    "lon": 9.5824033,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119723246"
+  },
+  {
+    "id": "porto-d-agumu",
+    "name": "Porto D Agumu",
+    "lat": 38.986219,
+    "lon": 8.997436,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "monti-russu",
+    "name": "Monti Russu",
+    "lat": 41.1426191,
+    "lon": 9.12271,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/576806467"
+  },
+  {
+    "id": "la-pitrizza",
+    "name": "La Pitrizza",
+    "lat": 41.1085181,
+    "lon": 9.4529192,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/200399007"
+  },
+  {
+    "id": "scivu",
+    "name": "Scivu",
+    "lat": 39.4939998,
+    "lon": 8.4110711,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/113683868"
+  },
+  {
+    "id": "li-junchi",
+    "name": "Li Junchi",
+    "lat": 40.9737016,
+    "lon": 8.853411,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119752409"
+  },
+  {
+    "id": "porto-sole",
+    "name": "Porto Sole",
+    "lat": 41.1341485,
+    "lon": 9.4747692,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1417729276"
+  },
+  {
+    "id": "argentiera",
+    "name": "Argentiera",
+    "lat": 40.7376671,
+    "lon": 8.148171,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/648982432"
+  },
+  {
+    "id": "poetto-quartu",
+    "name": "Poetto Quartu",
+    "lat": 39.2138983,
+    "lon": 9.1773226,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1169530710"
+  },
+  {
+    "id": "spiaggia-bianca-golfo-aranci",
+    "name": "Spiaggia Bianca Golfo Aranci",
+    "lat": 40.9905438,
+    "lon": 9.5909967,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/256154320"
+  },
+  {
+    "id": "terra-mala",
+    "name": "Terra Mala",
+    "lat": 39.1929133,
+    "lon": 9.3421631,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1317597731"
+  },
+  {
+    "id": "chia-sa-colonia",
+    "name": "Chia Sa Colonia",
+    "lat": 38.894395,
+    "lon": 8.878097,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "cala-battistoni",
+    "name": "Cala Battistoni",
+    "lat": 41.1404485,
+    "lon": 9.4792575,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/41252733"
+  },
+  {
+    "id": "tuerredda",
+    "name": "Tuerredda",
+    "lat": 38.8948922,
+    "lon": 8.8138714,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/81141271"
+  },
+  {
+    "id": "seu",
+    "name": "Seu",
+    "lat": 39.8990144,
+    "lon": 8.404034,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/580849883"
+  },
+  {
+    "id": "maimoni",
+    "name": "Maimoni",
+    "lat": 39.9139992,
+    "lon": 8.4006122,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72445655"
+  },
+  {
+    "id": "cala-viola",
+    "name": "Cala Viola",
+    "lat": 40.6364241,
+    "lon": 8.1844454,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/699287933"
+  },
+  {
+    "id": "li-cossi",
+    "name": "Li Cossi",
+    "lat": 41.0466532,
+    "lon": 8.9361334,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119026959"
+  },
+  {
+    "id": "razza-di-juncu",
+    "name": "Razza Di Juncu",
+    "lat": 41.0529021,
+    "lon": 9.518366,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/277316362"
+  },
+  {
+    "id": "isola-rossa",
+    "name": "Isola Rossa",
+    "lat": 41.0113604,
+    "lon": 8.8783112,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/37607720"
+  },
+  {
+    "id": "poetto",
+    "name": "Poetto",
+    "lat": 39.2103983,
+    "lon": 9.1708555,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/329177193"
+  },
+  {
+    "id": "cala-murtas",
+    "name": "Cala Murtas",
+    "lat": 39.5216379,
+    "lon": 9.6343767,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/150919465"
+  },
+  {
+    "id": "spiaggia-saline-stintino",
+    "name": "Spiaggia Saline Stintino",
+    "lat": 40.9058369,
+    "lon": 8.2362947,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/437566558"
+  },
+  {
+    "id": "su-sirboni",
+    "name": "Su Sirboni",
+    "lat": 39.7442424,
+    "lon": 9.6742201,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/6792234949"
+  },
+  {
+    "id": "le-saline-palau",
+    "name": "Le Saline Palau",
+    "lat": 41.1612691,
+    "lon": 9.4089045,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/185269020"
+  },
+  {
+    "id": "spiaggia-grande-calasetta",
+    "name": "Spiaggia Grande Calasetta",
+    "lat": 39.0840705,
+    "lon": 8.3575867,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/135667127"
+  },
+  {
+    "id": "perda-rubia",
+    "name": "Perda Rubia",
+    "lat": 39.005,
+    "lon": 8.585,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "s-archittu",
+    "name": "S Archittu",
+    "lat": 40.0908469,
+    "lon": 8.4908463,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/113503106"
+  },
+  {
+    "id": "porto-giunco",
+    "name": "Porto Giunco",
+    "lat": 39.11047,
+    "lon": 9.5217396,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/47372030"
+  },
+  {
+    "id": "s-ena-arrubia",
+    "name": "S Ena Arrubia",
+    "lat": 39.8231049,
+    "lon": 8.5688929,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/4374"
+  },
+  {
+    "id": "ira",
+    "name": "Ira",
+    "lat": 41.0269694,
+    "lon": 9.5318625,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/140375002"
+  },
+  {
+    "id": "cala-del-gallo",
+    "name": "Cala Del Gallo",
+    "lat": 40.6341719,
+    "lon": 8.1760903,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/699287931"
+  },
+  {
+    "id": "cala-liberotto",
+    "name": "Cala Liberotto",
+    "lat": 40.4315903,
+    "lon": 9.7771128,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/6547983"
+  },
+  {
+    "id": "tuaredda-piccola",
+    "name": "Tuaredda Piccola",
+    "lat": 38.895,
+    "lon": 8.809,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  },
+  {
+    "id": "porto-pino",
+    "name": "Porto Pino",
+    "lat": 38.9622423,
+    "lon": 8.5969364,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/137708402"
+  },
+  {
+    "id": "capo-pecora",
+    "name": "Capo Pecora",
+    "lat": 39.457069,
+    "lon": 8.3795171,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/3661907646"
+  },
+  {
+    "id": "mandriola",
+    "name": "Mandriola",
+    "lat": 40.0341906,
+    "lon": 8.3973017,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/649047746"
+  },
+  {
+    "id": "la-maddalena-capoterra",
+    "name": "La Maddalena Capoterra",
+    "lat": 39.1522046,
+    "lon": 9.0203604,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1840110493"
+  },
+  {
+    "id": "girin",
+    "name": "Girin",
+    "lat": 39.1205,
+    "lon": 8.3087408,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/846911014"
+  },
+  {
+    "id": "cala-suaraccia",
+    "name": "Cala Suaraccia",
+    "lat": 40.8410675,
+    "lon": 9.7058595,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/232067179"
+  },
+  {
+    "id": "cala-sapone",
+    "name": "Cala Sapone",
+    "lat": 39.0086294,
+    "lon": 8.3855258,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/135667115"
+  },
+  {
+    "id": "iscrixedda",
+    "name": "Iscrixedda",
+    "lat": 39.9637668,
+    "lon": 9.6800522,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/127873922"
+  },
+  {
+    "id": "cala-lunga-sant-antioco",
+    "name": "Cala Lunga Sant Antioco",
+    "lat": 39.0244225,
+    "lon": 8.3754011,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1422441664"
+  },
+  {
+    "id": "is-arenas-biancas",
+    "name": "Is Arenas Biancas",
+    "lat": 38.9518141,
+    "lon": 8.6173987,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/137708388"
+  },
+  {
+    "id": "s-abba-druche",
+    "name": "S Abba Druche",
+    "lat": 40.3137686,
+    "lon": 8.4646147,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/256479559"
+  },
+  {
+    "id": "la-bobba",
+    "name": "La Bobba",
+    "lat": 39.0959911,
+    "lon": 8.2946451,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/136513022"
+  },
+  {
+    "id": "porto-ferro",
+    "name": "Porto Ferro",
+    "lat": 40.6892258,
+    "lon": 8.2013927,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/293294514"
+  },
+  {
+    "id": "mannena",
+    "name": "Mannena",
+    "lat": 41.1428922,
+    "lon": 9.4298963,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/185269868"
+  },
+  {
+    "id": "spiaggia-sant-anna-budoni",
+    "name": "Spiaggia Sant Anna Budoni",
+    "lat": 40.6992656,
+    "lon": 9.7237499,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/5846987102"
+  },
+  {
+    "id": "vignola-mare",
+    "name": "Vignola Mare",
+    "lat": 41.1280916,
+    "lon": 9.0697398,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119142991"
+  },
+  {
+    "id": "santa-giusta-castiadas",
+    "name": "Santa Giusta Castiadas",
+    "lat": 39.2289574,
+    "lon": 9.5684488,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/367227843"
+  },
+  {
+    "id": "funtana-meiga",
+    "name": "Funtana Meiga",
+    "lat": 39.8961446,
+    "lon": 8.4233081,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/860149826"
+  },
+  {
+    "id": "margine-rosso",
+    "name": "Margine Rosso",
+    "lat": 39.2206054,
+    "lon": 9.2415203,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/808920692"
+  },
+  {
+    "id": "pittulongu",
+    "name": "Pittulongu",
+    "lat": 40.9464578,
+    "lon": 9.5727151,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/185582758"
+  },
+  {
+    "id": "su-barone",
+    "name": "Su Barone",
+    "lat": 40.3479624,
+    "lon": 9.6941391,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/81645129"
+  },
+  {
+    "id": "capo-san-marco",
+    "name": "Capo San Marco",
+    "lat": 39.8601266,
+    "lon": 8.4354937,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/5375888620"
+  },
+  {
+    "id": "cala-garibaldi",
+    "name": "Cala Garibaldi",
+    "lat": 41.2225172,
+    "lon": 9.4582732,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/73549057"
+  },
+  {
+    "id": "li-feruli",
+    "name": "Li Feruli",
+    "lat": 40.991763,
+    "lon": 8.8701087,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1130941547"
+  },
+  {
+    "id": "porto-quadro",
+    "name": "Porto Quadro",
+    "lat": 41.2457253,
+    "lon": 9.2080672,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/2871493158"
+  },
+  {
+    "id": "torre-delle-stelle",
+    "name": "Torre Delle Stelle",
+    "lat": 39.148854,
+    "lon": 9.3991891,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/375721365"
+  },
+  {
+    "id": "bados",
+    "name": "Bados",
+    "lat": 40.954623,
+    "lon": 9.5752594,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/6920427176"
+  },
+  {
+    "id": "lazzaretto",
+    "name": "Lazzaretto",
+    "lat": 40.5820291,
+    "lon": 8.2465861,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/89673545"
+  },
+  {
+    "id": "isuledda-san-teodoro",
+    "name": "Isuledda San Teodoro",
+    "lat": 40.7638336,
+    "lon": 9.6920032,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/422618680"
+  },
+  {
+    "id": "geremeas",
+    "name": "Geremeas",
+    "lat": 39.1650479,
+    "lon": 9.3820828,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/20286462"
+  },
+  {
+    "id": "spalmatore-maddalena",
+    "name": "Spalmatore Maddalena",
+    "lat": 41.2472761,
+    "lon": 9.4288284,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/7137817697"
+  },
+  {
+    "id": "plagemesu",
+    "name": "Plagemesu",
+    "lat": 39.2812029,
+    "lon": 8.4327635,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/113593948"
+  },
+  {
+    "id": "campus",
+    "name": "Campus",
+    "lat": 39.2581798,
+    "lon": 9.123575,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/9333597"
+  },
+  {
+    "id": "cala-gonone",
+    "name": "Cala Gonone",
+    "lat": 40.2826415,
+    "lon": 9.6362849,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/19358137"
+  },
+  {
+    "id": "cala-di-volpe",
+    "name": "Cala Di Volpe",
+    "lat": 41.0902763,
+    "lon": 9.5410037,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1574209626"
+  },
+  {
+    "id": "su-guventeddu",
+    "name": "Su Guventeddu",
+    "lat": 38.9985883,
+    "lon": 9.018096,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1159412332"
+  },
+  {
+    "id": "cala-spinosa",
+    "name": "Cala Spinosa",
+    "lat": 41.2427797,
+    "lon": 9.147454,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/279808647"
+  },
+  {
+    "id": "porto-frailis",
+    "name": "Porto Frailis",
+    "lat": 39.9240767,
+    "lon": 9.7042431,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/65069887"
+  },
+  {
+    "id": "cala-caterina",
+    "name": "Cala Caterina",
+    "lat": 39.1077588,
+    "lon": 9.5118105,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/157214122"
+  },
+  {
+    "id": "cala-cipolla",
+    "name": "Cala Cipolla",
+    "lat": 38.8787638,
+    "lon": 8.8544656,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/139172350"
+  },
+  {
+    "id": "cala-dei-gabbiani",
+    "name": "Cala Dei Gabbiani",
+    "lat": 40.1202631,
+    "lon": 9.6797743,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/290678263"
+  },
+  {
+    "id": "cala-serena",
+    "name": "Cala Serena",
+    "lat": 41.2270805,
+    "lon": 9.4603416,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/73548584"
+  },
+  {
+    "id": "cala-biriola",
+    "name": "Cala Biriola",
+    "lat": 40.1429732,
+    "lon": 9.6522041,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/223280198"
+  },
+  {
+    "id": "porto-faro",
+    "name": "Porto Faro",
+    "lat": 40.8360259,
+    "lon": 8.3972581,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/7868623442"
+  },
+  {
+    "id": "sa-curcurica",
+    "name": "Sa Curcurica",
+    "lat": 40.4560306,
+    "lon": 9.7871206,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/82470792"
+  },
+  {
+    "id": "putzu-idu",
+    "name": "Putzu Idu",
+    "lat": 40.0240303,
+    "lon": 8.4098033,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/649047740"
+  },
+  {
+    "id": "isuledda",
+    "name": "Isuledda",
+    "lat": 41.0140294,
+    "lon": 8.8633513,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117078601"
+  },
+  {
+    "id": "cala-brandinchi",
+    "name": "Cala Brandinchi",
+    "lat": 40.8346441,
+    "lon": 9.6855594,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/321807345"
+  },
+  {
+    "id": "torre-dei-corsari",
+    "name": "Torre Dei Corsari",
+    "lat": 39.6833994,
+    "lon": 8.4457339,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/199931288"
+  },
+  {
+    "id": "is-arutas",
+    "name": "Is Arutas",
+    "lat": 39.9513409,
+    "lon": 8.4015005,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72445058"
+  },
+  {
+    "id": "poltu-paddha",
+    "name": "Poltu Paddha",
+    "lat": 41.1219474,
+    "lon": 9.537497,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/146246307"
+  },
+  {
+    "id": "porto-taverna",
+    "name": "Porto Taverna",
+    "lat": 40.8585915,
+    "lon": 9.6501141,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1819550900"
+  },
+  {
+    "id": "gutturu-flumini",
+    "name": "Gutturu Flumini",
+    "lat": 39.5935954,
+    "lon": 8.4679446,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/233514818"
+  },
+  {
+    "id": "campana",
+    "name": "Campana",
+    "lat": 38.8887361,
+    "lon": 8.870678,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/169429278"
+  },
+  {
+    "id": "la-caletta",
+    "name": "La Caletta",
+    "lat": 40.5981155,
+    "lon": 9.752523,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/648866767"
+  },
+  {
+    "id": "san-giovanni-sinis",
+    "name": "San Giovanni di Sinis",
+    "lat": 39.8801133,
+    "lon": 8.4370085,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72444182"
+  },
+  {
+    "id": "cala-sisine",
+    "name": "Cala Sisine",
+    "lat": 40.1796789,
+    "lon": 9.633807,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/121808970"
+  },
+  {
+    "id": "colostrai",
+    "name": "Colostrai",
+    "lat": 39.355711,
+    "lon": 9.5980602,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117038318"
+  },
+  {
+    "id": "punta-tegge",
+    "name": "Punta Tegge",
+    "lat": 41.2109278,
+    "lon": 9.3831212,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/3168769384"
+  },
+  {
+    "id": "cala-corsara",
+    "name": "Cala Corsara",
+    "lat": 41.2309169,
+    "lon": 9.3425003,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/119503319"
+  },
+  {
+    "id": "maria-pia",
+    "name": "Maria Pia",
+    "lat": 40.5867032,
+    "lon": 8.3060239,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/79193647"
+  },
+  {
+    "id": "la-ciaccia",
+    "name": "La Ciaccia",
+    "lat": 40.916321,
+    "lon": 8.7791215,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/302116889"
+  },
+  {
+    "id": "porto-ainu",
+    "name": "Porto Ainu",
+    "lat": 40.7058093,
+    "lon": 9.7168694,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/102784793"
+  },
+  {
+    "id": "pevero",
+    "name": "Pevero",
+    "lat": 41.1124716,
+    "lon": 9.5451569,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/140371480"
+  },
+  {
+    "id": "liscia-ruja",
+    "name": "Liscia Ruja",
+    "lat": 41.0704637,
+    "lon": 9.5285342,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/121747790"
+  },
+  {
+    "id": "cala-moresca",
+    "name": "Cala Moresca",
+    "lat": 40.9875196,
+    "lon": 9.6453236,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/200078744"
+  },
+  {
+    "id": "cann-e-sisa",
+    "name": "Cann E Sisa",
+    "lat": 39.1559819,
+    "lon": 9.3940246,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/142027862"
+  },
+  {
+    "id": "porto-tramatzu",
+    "name": "Porto Tramatzu",
+    "lat": 39.4541582,
+    "lon": 9.6404443,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/1915832890"
+  },
+  {
+    "id": "romazzino",
+    "name": "Romazzino",
+    "lat": 41.0991617,
+    "lon": 9.5643438,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/273567803"
+  },
+  {
+    "id": "piccolo-pevero",
+    "name": "Piccolo Pevero",
+    "lat": 41.1145764,
+    "lon": 9.5402495,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/140371487"
+  },
+  {
+    "id": "palmasera",
+    "name": "Palmasera",
+    "lat": 40.2799157,
+    "lon": 9.6353613,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/47484348"
+  },
+  {
+    "id": "is-mortorius",
+    "name": "Is Mortorius",
+    "lat": 39.1990787,
+    "lon": 9.32493,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1421541176"
+  },
+  {
+    "id": "capo-coda-cavallo",
+    "name": "Capo Coda Cavallo",
+    "lat": 40.839035,
+    "lon": 9.7131929,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/260691744"
+  },
+  {
+    "id": "turri",
+    "name": "Turri",
+    "lat": 39.704845,
+    "lon": 8.916534,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "relation/40037"
+  },
+  {
+    "id": "lido-orri",
+    "name": "Lido Orri",
+    "lat": 39.9073728,
+    "lon": 9.684,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/238322666"
+  },
+  {
+    "id": "mari-ermi",
+    "name": "Mari Ermi",
+    "lat": 39.9668216,
+    "lon": 8.3994744,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/72444564"
+  },
+  {
+    "id": "cala-girgolu",
+    "name": "Cala Girgolu",
+    "lat": 40.8584035,
+    "lon": 9.6734115,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/1094569251"
+  },
+  {
+    "id": "feraxi",
+    "name": "Feraxi",
+    "lat": 39.3275139,
+    "lon": 9.5999412,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "way/117054356"
+  },
+  {
+    "id": "masua",
+    "name": "Masua",
+    "lat": 39.3314552,
+    "lon": 8.4323177,
+    "zone": "Sardegna",
+    "source": "OpenStreetMap",
+    "sourceId": "node/946851503"
+  },
+  {
+    "id": "porto-sa-ruxi",
+    "name": "Porto Sa Ruxi",
+    "lat": 39.130196,
+    "lon": 9.454118,
+    "zone": "Sardegna",
+    "source": "Public coordinate cross-check",
+    "sourceId": "manual-reviewed"
+  }
+]
