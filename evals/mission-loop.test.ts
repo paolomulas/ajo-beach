@@ -30,6 +30,8 @@ describe("AJÒ deterministic eval set", () => {
       expect(plan.top.signals.crowding.score).toBeLessThanOrEqual(100);
       expect(Date.parse(plan.top.signals.camera.expiresAt) - Date.parse(plan.top.signals.camera.observedAt)).toBe(30 * 60 * 1000);
       expect(plan.top.signals.camera.retention).toBe("Images not retained");
+      expect(plan.top.uvIndex).toBeGreaterThanOrEqual(0);
+      expect(plan.top.apparentTemperature).toBeTypeOf("number");
     });
   }
 

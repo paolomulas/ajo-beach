@@ -1,4 +1,4 @@
-export type CoastIconName = "wind" | "wave" | "water" | "crowd" | "parking" | "leaf" | "camera" | "bell" | "sun" | "relax" | "spark" | "surf" | "kite";
+export type CoastIconName = "wind" | "wave" | "water" | "thermometer" | "crowd" | "parking" | "leaf" | "camera" | "bell" | "sun" | "relax" | "spark" | "surf" | "kite";
 
 export function CoastIcon({ name, className = "" }: { name: CoastIconName; className?: string }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
@@ -7,6 +7,7 @@ export function CoastIcon({ name, className = "" }: { name: CoastIconName; class
       {name === "wind" && <><path d="M3 7h10.5c3.3 0 3.3-4.5.2-4.5-1.4 0-2.4.8-2.7 1.9"/><path d="M3 12h15c3.5 0 3.8 4.8.3 4.8-1.6 0-2.7-.9-3-2.2M3 17h7.5"/></>}
       {name === "wave" && <><path d="M2 9c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 14c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M4 18h16"/></>}
       {name === "water" && <><path d="M12 2S6.5 9 6.5 14a5.5 5.5 0 0 0 11 0C17.5 9 12 2 12 2Z"/><path d="M9.5 15.5c.7 1 1.5 1.4 2.7 1.5"/></>}
+      {name === "thermometer" && <><path d="M9 4a3 3 0 0 1 6 0v9.2a5 5 0 1 1-6 0V4Z"/><path d="M12 7v9M9 10h3"/></>}
       {name === "crowd" && <><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.3"/><path d="M3.5 20c.4-4 2.3-6 5.5-6s5.2 2 5.5 6M14 15c3.6-.7 5.8 1 6.5 4"/></>}
       {name === "parking" && <><rect x="4" y="2.5" width="16" height="19" rx="4"/><path d="M9 17V7h4.2a3.5 3.5 0 0 1 0 7H9"/></>}
       {name === "leaf" && <><path d="M20.5 3.5C12 3.5 5 7.2 5 13.2c0 3.4 2.7 5.8 6 5.3 5.8-.8 8.6-7.6 9.5-15Z"/><path d="M3 21c3.2-5 7.5-8.2 12.8-11"/></>}

@@ -40,6 +40,8 @@ The product follows a visible agent loop:
 - Relax, Beach Life, Surf and Kitesurf mission profiles
 - Sardinian spot shortlist with transparent mission-fit score
 - Coastal Intelligence deck with live wind/gusts, sea state, water/air temperature, UV-ready weather fields and clear provenance labels
+- Interactive, offline-safe Sardinia explorer with geographically positioned beach markers, mission filters, real photography and webcam shortcuts
+- Live UV index and apparent-temperature heat stress with practical shade, hydration and exposure guidance
 - Explainable crowding, parking-pressure and Posidonia-risk proxies displayed separately from live observations
 - Direct or nearest Sardinian live-camera link for every curated beach
 - A visible 30-minute Camera Agent pipeline (snapshot → privacy filter → structured vision signal → replan), explicitly simulated until authorized scheduled ingestion is enabled

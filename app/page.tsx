@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Pavoncella } from "@/app/components/Pavoncella";
 import { CoastIcon, CoastIconName } from "@/app/components/CoastIcon";
+import { BeachMap } from "@/app/components/BeachMap";
 import { buildDemoPlan, Profile } from "@/lib/engine";
-import { MISSION_LABELS, Mission } from "@/lib/spots";
+import { MISSION_LABELS, Mission, SPOTS } from "@/lib/spots";
 
 type Plan = ReturnType<typeof buildDemoPlan> & {
   mode: string;
@@ -41,7 +42,7 @@ export default function Home() {
   const [replanFrom, setReplanFrom] = useState("");
   const [showSplash, setShowSplash] = useState(true);
   const [installPrompt, setInstallPrompt] = useState<DeferredInstallPrompt | null>(null);
-  const [islandWeather, setIslandWeather] = useState({ temperature: 29, windSpeed: 13, waveHeight: 0.5, source: "DEMO" });
+  const [islandWeather, setIslandWeather] = useState({ temperature: 29, apparentTemperature: 31, uvIndex: 7, windSpeed: 13, waveHeight: 0.5, source: "DEMO" });
 
   useEffect(() => {
     const splashTimer = window.setTimeout(() => setShowSplash(false), 1150);
@@ -195,6 +196,7 @@ export default function Home() {
             <span><CoastIcon name="sun"/><b>{islandWeather.temperature}°</b> Cagliari</span>
             <span><CoastIcon name="wind"/><b>{islandWeather.windSpeed} kt</b> Poetto wind</span>
             <span><CoastIcon name="wave"/><b>{islandWeather.waveHeight.toFixed(1)} m</b> South swell</span>
+            <span><CoastIcon name="sun"/><b>UV {islandWeather.uvIndex.toFixed(1)}</b>{islandWeather.uvIndex >= 8 ? "Very high" : "Sun exposure"}</span>
           </div>
         </div>
         <div className="island-art" aria-hidden="true">
@@ -205,6 +207,8 @@ export default function Home() {
           <div className="wind-lines">⌁⌁⌁</div>
         </div>
       </section>
+
+      <BeachMap spots={SPOTS} mission={profile.mission} onMissionChange={(mission) => setProfile({ ...profile, mission })} />
 
       <section className="mission-panel" id="mission">
         <div className="section-heading">
@@ -279,6 +283,8 @@ export default function Home() {
               <article className="signal-card"><CoastIcon name="wind" className="signal-icon"/><span className="signal-source live">LIVE</span><small>WIND · GUSTS</small><strong>{plan.top.windSpeed} <i>kt</i></strong><p>Gusts {plan.top.gusts} kt · direction {plan.top.windDirection}°</p></article>
               <article className="signal-card"><CoastIcon name="wave" className="signal-icon"/><span className="signal-source live">LIVE</span><small>SEA STATE</small><strong>{plan.top.waveHeight.toFixed(1)} <i>m</i></strong><p>{plan.top.wavePeriod}s period · local verification advised</p></article>
               <article className="signal-card"><CoastIcon name="water" className="signal-icon"/><span className="signal-source live">LIVE</span><small>WATER · AIR</small><strong>{plan.top.seaTemperature}° <i>water</i></strong><p>{plan.top.temperature}° air · feels {plan.top.apparentTemperature}°</p></article>
+              <article className="signal-card uv-card"><CoastIcon name="sun" className="signal-icon"/><span className="signal-source live">LIVE</span><small>UV INDEX</small><strong>{plan.top.uvIndex.toFixed(1)} <i>{plan.top.uvIndex >= 8 ? "very high" : plan.top.uvIndex >= 6 ? "high" : "moderate"}</i></strong><div className="meter"><i style={{ width: `${Math.min(100, plan.top.uvIndex / 11 * 100)}%` }}/></div><p>{plan.top.uvIndex >= 8 ? "Seek shade 11:00–16:00 · SPF 50+" : "Protection recommended around midday"}</p></article>
+              <article className="signal-card heat-card"><CoastIcon name="thermometer" className="signal-icon"/><span className="signal-source live">LIVE</span><small>HEAT STRESS</small><strong>{plan.top.apparentTemperature}° <i>feels like</i></strong><div className="meter"><i style={{ width: `${Math.min(100, Math.max(0, (plan.top.apparentTemperature - 20) / 24 * 100))}%` }}/></div><p>{plan.top.apparentTemperature >= 38 ? "Extreme heat · water, shade and shorter exposure" : plan.top.apparentTemperature >= 32 ? "High heat · hydrate and plan shade" : "Comfortable with normal precautions"}</p></article>
               <article className="signal-card crowd"><CoastIcon name="crowd" className="signal-icon"/><span className="signal-source camera">DEMO CAMERA</span><small>CROWDING</small><strong>{plan.top.signals.crowding.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.crowding.score}%` }}/></div><p>{plan.top.signals.crowding.score}/100 · {plan.top.signals.crowding.confidence}% confidence</p></article>
               <article className="signal-card parking"><CoastIcon name="parking" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>PARKING</small><strong>{plan.top.signals.parking.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.parking.score}%` }}/></div><p>{plan.top.signals.parking.detail}</p></article>
               <article className="signal-card posidonia"><CoastIcon name="leaf" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
