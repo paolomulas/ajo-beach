@@ -44,6 +44,7 @@ export default function Home() {
   const [replanFrom, setReplanFrom] = useState("");
   const [showSplash, setShowSplash] = useState(true);
   const [installPrompt, setInstallPrompt] = useState<DeferredInstallPrompt | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [islandWeather, setIslandWeather] = useState({ temperature: 29, apparentTemperature: 31, uvIndex: 7, windSpeed: 13, waveHeight: 0.5, source: "DEMO" });
 
   useEffect(() => {
@@ -184,7 +185,16 @@ export default function Home() {
         <div className="header-actions">
           <span className="live-pill"><i /> {islandWeather.source} ISLAND</span>
           <button className="icon-button" onClick={install} aria-label="Install AJÒ">↧</button>
+          <button className="menu-button" onClick={() => setMobileMenuOpen((open) => !open)} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
+            <span /><span /><span />
+          </button>
         </div>
+        {mobileMenuOpen && <nav className="mobile-menu" aria-label="Quick navigation">
+          <a href="#mission" onClick={() => setMobileMenuOpen(false)}>Set your mission <b>01</b></a>
+          <a href="#map" onClick={() => setMobileMenuOpen(false)}>Explore the island <b>MAP</b></a>
+          <a href="#plan" onClick={() => setMobileMenuOpen(false)}>Your best match <b>02</b></a>
+          <button onClick={() => { setMobileMenuOpen(false); install(); }}>Install AJÒ <b>↧</b></button>
+        </nav>}
       </header>
 
       <section className="hero" id="top">
@@ -257,7 +267,7 @@ export default function Home() {
       )}
 
       {plan && !loading && (
-        <section className="plan-section">
+        <section className="plan-section" id="plan">
           <div className="section-heading plan-heading">
             <div><p className="eyebrow dark">02 · YOUR BEST MATCH</p><h2>Your island window</h2></div>
             <span className={`mode-badge ${plan.mode.includes("live") ? "live" : ""}`}>{plan.mode.includes("live") ? "FRESH CONDITIONS" : "PREVIEW CONDITIONS"}</span>

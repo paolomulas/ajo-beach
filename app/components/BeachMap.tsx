@@ -65,7 +65,7 @@ export function BeachMap({ spots, mission, onMissionChange }: { spots: Spot[]; m
   }
 
   return (
-    <section className="map-explorer" aria-label="Explore Sardinian beaches on the map">
+    <section className="map-explorer" id="map" aria-label="Explore Sardinian beaches on the map">
       <div className="map-heading">
         <div><p className="eyebrow dark">{DISCOVERY_BEACHES.length} BEACHES · 9 COMPLETE GUIDES</p><h2>The whole island, one glance.</h2><p className="map-subtitle">Colours show how well each beach matches your day. Open a gold-ringed beach for the complete picture.</p></div>
         <div className="map-filters" aria-label="Filter beaches by mission">
