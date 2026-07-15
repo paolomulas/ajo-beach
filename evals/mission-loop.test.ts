@@ -32,6 +32,8 @@ describe("AJÒ deterministic eval set", () => {
       expect(plan.top.signals.camera.retention).toBe("Images not retained");
       expect(plan.top.uvIndex).toBeGreaterThanOrEqual(0);
       expect(plan.top.apparentTemperature).toBeTypeOf("number");
+      expect(plan.top.hourly).toHaveLength(7);
+      expect(plan.top.hourly.every((point) => point.time.length === 5)).toBe(true);
     });
   }
 

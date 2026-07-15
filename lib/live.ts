@@ -4,6 +4,7 @@ import { SPOTS } from "./spots";
 
 type WeatherPayload = {
   current?: {
+    time?: string;
     temperature_2m?: number;
     apparent_temperature?: number;
     relative_humidity_2m?: number;
@@ -12,6 +13,13 @@ type WeatherPayload = {
     wind_speed_10m?: number;
     wind_direction_10m?: number;
     wind_gusts_10m?: number;
+  };
+  hourly?: {
+    time?: string[];
+    cloud_cover?: number[];
+    wind_speed_10m?: number[];
+    wind_gusts_10m?: number[];
+    wind_direction_10m?: number[];
   };
 };
 
@@ -34,6 +42,7 @@ export async function getLiveConditions() {
     latitude,
     longitude,
     current: "temperature_2m,apparent_temperature,relative_humidity_2m,cloud_cover,uv_index,wind_speed_10m,wind_direction_10m,wind_gusts_10m",
+    hourly: "cloud_cover,wind_speed_10m,wind_gusts_10m,wind_direction_10m",
     wind_speed_unit: "kn",
     timezone: "Europe/Rome",
   }).toString();
@@ -59,7 +68,19 @@ export async function getLiveConditions() {
 
   const value = Object.fromEntries(SPOTS.map((spot, index) => {
     const w = weather[index]?.current || {};
+    const h = weather[index]?.hourly || {};
     const m = marine[index]?.current || {};
+    const start = Math.max(0, h.time?.findIndex((time) => time >= (w.time || "")) ?? 0);
+    const hourly = [0, 2, 4, 6, 8, 10, 12].map((offset) => {
+      const point = Math.min((h.time?.length || 1) - 1, start + offset);
+      return {
+        time: (h.time?.[point] || "").slice(11, 16),
+        cloudCover: Math.round(h.cloud_cover?.[point] ?? w.cloud_cover ?? 0),
+        windSpeed: Math.round(h.wind_speed_10m?.[point] ?? w.wind_speed_10m ?? 0),
+        gusts: Math.round(h.wind_gusts_10m?.[point] ?? w.wind_gusts_10m ?? 0),
+        windDirection: Math.round(h.wind_direction_10m?.[point] ?? w.wind_direction_10m ?? 0),
+      };
+    });
     return [spot.id, {
       windSpeed: Math.round(w.wind_speed_10m ?? 0),
       windDirection: Math.round(w.wind_direction_10m ?? 0),
@@ -72,6 +93,7 @@ export async function getLiveConditions() {
       cloudCover: Math.round(w.cloud_cover ?? 0),
       uvIndex: Number((w.uv_index ?? 0).toFixed(1)),
       seaTemperature: Math.round(m.sea_surface_temperature ?? 0),
+      hourly,
       source: "live" as const,
     }];
   }));

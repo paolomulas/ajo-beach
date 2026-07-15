@@ -9,6 +9,8 @@ export type Profile = {
   maxDrive: number;
 };
 
+export type HourlyPoint = { time: string; cloudCover: number; windSpeed: number; gusts: number; windDirection: number };
+
 export type Conditions = {
   windSpeed: number;
   windDirection: number;
@@ -21,6 +23,7 @@ export type Conditions = {
   cloudCover: number;
   uvIndex: number;
   seaTemperature: number;
+  hourly: HourlyPoint[];
   source: "live" | "demo";
 };
 
@@ -39,11 +42,22 @@ export type CoastalSignals = {
 
 export type RankedSpot = Spot & Conditions & { score: number; reasons: string[]; risk: string; signals: CoastalSignals };
 
+function demoHourly(wind: number, gusts: number, cloud: number, direction: number): HourlyPoint[] {
+  const hour = new Date().getHours();
+  return [0, 2, 4, 6, 8, 10, 12].map((offset, index) => ({
+    time: `${String((hour + offset) % 24).padStart(2, "0")}:00`,
+    cloudCover: clamp(cloud + [8, 2, -4, -7, -2, 4, 9][index]),
+    windSpeed: Math.max(0, Math.round(wind + [0, -1, 1, 3, 2, 0, -2][index])),
+    gusts: Math.max(0, Math.round(gusts + [0, 1, 3, 4, 2, 0, -1][index])),
+    windDirection: (direction + [0, 4, 8, 12, 9, 5, 2][index]) % 360,
+  }));
+}
+
 const demoByCoast: Record<Spot["coast"], Conditions> = {
-  south: { windSpeed: 13, windDirection: 315, gusts: 18, waveHeight: 0.5, wavePeriod: 5, temperature: 29, apparentTemperature: 31, humidity: 58, cloudCover: 12, uvIndex: 7, seaTemperature: 25, source: "demo" },
-  east: { windSpeed: 9, windDirection: 315, gusts: 14, waveHeight: 0.3, wavePeriod: 4, temperature: 30, apparentTemperature: 32, humidity: 61, cloudCover: 8, uvIndex: 8, seaTemperature: 26, source: "demo" },
-  west: { windSpeed: 21, windDirection: 305, gusts: 29, waveHeight: 1.6, wavePeriod: 8, temperature: 27, apparentTemperature: 28, humidity: 66, cloudCover: 21, uvIndex: 6, seaTemperature: 24, source: "demo" },
-  north: { windSpeed: 24, windDirection: 300, gusts: 32, waveHeight: 1.1, wavePeriod: 7, temperature: 26, apparentTemperature: 27, humidity: 63, cloudCover: 16, uvIndex: 6, seaTemperature: 24, source: "demo" },
+  south: { windSpeed: 13, windDirection: 315, gusts: 18, waveHeight: 0.5, wavePeriod: 5, temperature: 29, apparentTemperature: 31, humidity: 58, cloudCover: 12, uvIndex: 7, seaTemperature: 25, hourly: demoHourly(13, 18, 12, 315), source: "demo" },
+  east: { windSpeed: 9, windDirection: 315, gusts: 14, waveHeight: 0.3, wavePeriod: 4, temperature: 30, apparentTemperature: 32, humidity: 61, cloudCover: 8, uvIndex: 8, seaTemperature: 26, hourly: demoHourly(9, 14, 8, 315), source: "demo" },
+  west: { windSpeed: 21, windDirection: 305, gusts: 29, waveHeight: 1.6, wavePeriod: 8, temperature: 27, apparentTemperature: 28, humidity: 66, cloudCover: 21, uvIndex: 6, seaTemperature: 24, hourly: demoHourly(21, 29, 21, 305), source: "demo" },
+  north: { windSpeed: 24, windDirection: 300, gusts: 32, waveHeight: 1.1, wavePeriod: 7, temperature: 26, apparentTemperature: 27, humidity: 63, cloudCover: 16, uvIndex: 6, seaTemperature: 24, hourly: demoHourly(24, 32, 16, 300), source: "demo" },
 };
 
 function angleDistance(a: number, b: number) {

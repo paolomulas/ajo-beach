@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Pavoncella } from "@/app/components/Pavoncella";
 import { CoastIcon, CoastIconName } from "@/app/components/CoastIcon";
 import { BeachMap } from "@/app/components/BeachMap";
+import { ForecastTrends } from "@/app/components/ForecastTrends";
+import { PlaceExperience } from "@/app/components/PlaceExperience";
 import { buildDemoPlan, Profile } from "@/lib/engine";
 import { MISSION_LABELS, Mission, SPOTS } from "@/lib/spots";
 
@@ -290,6 +292,8 @@ export default function Home() {
               <article className="signal-card posidonia"><CoastIcon name="leaf" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
             </div>
 
+            <ForecastTrends spot={plan.top} />
+
             <article className="camera-agent-card">
               <div className="camera-orbit" aria-hidden="true"><CoastIcon name="camera"/><i/><i/></div>
               <div className="camera-copy">
@@ -308,6 +312,8 @@ export default function Home() {
             </article>
             <p className="data-note">Weather and marine values: {plan.top.source === "live" ? <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open‑Meteo live feed ↗</a> : "contest demo dataset"}. Crowd, parking and Posidonia are explainable proxies; camera vision remains simulated until scheduled ingestion is enabled.</p>
           </section>
+
+          <PlaceExperience spot={plan.top} />
 
           <div className="decision-grid">
             <div className="why-card">

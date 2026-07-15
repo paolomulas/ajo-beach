@@ -41,6 +41,9 @@ The product follows a visible agent loop:
 - Sardinian spot shortlist with transparent mission-fit score
 - Coastal Intelligence deck with live wind/gusts, sea state, water/air temperature, UV-ready weather fields and clear provenance labels
 - Interactive, offline-safe Sardinia explorer with geographically positioned beach markers, mission filters, real photography and webcam shortcuts
+- Privacy-preserving browser geolocation that selects the nearest curated beach without sending coordinates to the model
+- Seven-point live hourly cloud, wind, gust and direction trends with an on-beach compass
+- Destination profiles covering beach character, services, popular zones, nearby beaches and addable local experiences
 - Live UV index and apparent-temperature heat stress with practical shade, hydration and exposure guidance
 - Explainable crowding, parking-pressure and Posidonia-risk proxies displayed separately from live observations
 - Direct or nearest Sardinian live-camera link for every curated beach

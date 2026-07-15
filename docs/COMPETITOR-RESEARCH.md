@@ -97,6 +97,10 @@ competitor interface or dataset:
   ingestion are deployed;
 - the agent consumes these signals to preserve a mission and choose a fallback, which
   is the product layer missing from directory-first and forecast-first competitors.
+- the destination layer now pairs a geographically accurate interactive island map
+  with local-only nearest-beach selection, zone discovery, hourly cloud/wind trends,
+  readable wind direction, beach character and general nearby experiences. This
+  closes the discovery-depth gap without copying competitor layouts or data.
 
 This provenance split is intentional: `LIVE`, `DERIVED` and `DEMO CAMERA` must never
 be visually conflated.
