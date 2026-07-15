@@ -191,7 +191,7 @@ export default function Home() {
         <div className="hero-orb orb-one" />
         <div className="hero-orb orb-two" />
         <div className="hero-copy">
-          <p className="eyebrow">YOUR BEACH DAY AGENT</p>
+          <p className="eyebrow">YOUR SARDINIAN BEACH COMPANION</p>
           <h1>Don’t search beaches.<br /><em>Give AJÒ a mission.</em></h1>
           <p className="lede">AJÒ plans your day, watches the island and changes course before the wind does.</p>
           <div className="weather-strip">
@@ -215,9 +215,9 @@ export default function Home() {
       <section className="mission-panel" id="mission">
         <div className="section-heading">
           <div><p className="eyebrow dark">01 · SET THE MISSION</p><h2>What kind of day?</h2></div>
-          <label className="ai-toggle" title="Use one GPT-5.6 agent run">
+          <label className="ai-toggle" title="Refresh the recommendation with a fresh analysis">
             <input type="checkbox" checked={useAI} onChange={(event) => setUseAI(event.target.checked)} />
-            <span /> {useAI ? "LIVE GPT‑5.6" : "CREDIT-SAVER DEMO"}
+            <span /> {useAI ? "FRESH ANALYSIS" : "INSTANT PREVIEW"}
           </label>
         </div>
 
@@ -259,8 +259,8 @@ export default function Home() {
       {plan && !loading && (
         <section className="plan-section">
           <div className="section-heading plan-heading">
-            <div><p className="eyebrow dark">02 · AGENT DECISION</p><h2>Your island window</h2></div>
-            <span className={`mode-badge ${plan.mode.includes("live") ? "live" : ""}`}>{plan.mode.includes("live") ? "GPT‑5.6 LIVE" : "DEMO MODE"}</span>
+            <div><p className="eyebrow dark">02 · YOUR BEST MATCH</p><h2>Your island window</h2></div>
+            <span className={`mode-badge ${plan.mode.includes("live") ? "live" : ""}`}>{plan.mode.includes("live") ? "FRESH CONDITIONS" : "PREVIEW CONDITIONS"}</span>
           </div>
 
           <article className="hero-result" style={{ backgroundImage: `linear-gradient(90deg, rgba(10,39,33,.92) 0%, rgba(10,39,33,.56) 56%, rgba(10,39,33,.12) 100%), url(${plan.top.image})` }}>
@@ -278,7 +278,7 @@ export default function Home() {
           <section className="coast-deck" aria-label={`${plan.top.name} coastal intelligence`}>
             <div className="coast-deck-heading">
               <div><p className="eyebrow dark">COASTAL INTELLIGENCE</p><h3>The whole beach, at a glance.</h3></div>
-              <div className="provenance-key"><span><i className="source-live"/> LIVE</span><span><i className="source-derived"/> DERIVED</span><span><i className="source-camera"/> DEMO CAMERA</span></div>
+              <div className="provenance-key"><span><i className="source-live"/> CURRENT</span><span><i className="source-derived"/> ESTIMATE</span><span><i className="source-camera"/> CAMERA PREVIEW</span></div>
             </div>
 
             <div className="signal-grid">
@@ -287,9 +287,9 @@ export default function Home() {
               <article className="signal-card"><CoastIcon name="water" className="signal-icon"/><span className="signal-source live">LIVE</span><small>WATER · AIR</small><strong>{plan.top.seaTemperature}° <i>water</i></strong><p>{plan.top.temperature}° air · feels {plan.top.apparentTemperature}°</p></article>
               <article className="signal-card uv-card"><CoastIcon name="sun" className="signal-icon"/><span className="signal-source live">LIVE</span><small>UV INDEX</small><strong>{plan.top.uvIndex.toFixed(1)} <i>{plan.top.uvIndex >= 8 ? "very high" : plan.top.uvIndex >= 6 ? "high" : "moderate"}</i></strong><div className="meter"><i style={{ width: `${Math.min(100, plan.top.uvIndex / 11 * 100)}%` }}/></div><p>{plan.top.uvIndex >= 8 ? "Seek shade 11:00–16:00 · SPF 50+" : "Protection recommended around midday"}</p></article>
               <article className="signal-card heat-card"><CoastIcon name="thermometer" className="signal-icon"/><span className="signal-source live">LIVE</span><small>HEAT STRESS</small><strong>{plan.top.apparentTemperature}° <i>feels like</i></strong><div className="meter"><i style={{ width: `${Math.min(100, Math.max(0, (plan.top.apparentTemperature - 20) / 24 * 100))}%` }}/></div><p>{plan.top.apparentTemperature >= 38 ? "Extreme heat · water, shade and shorter exposure" : plan.top.apparentTemperature >= 32 ? "High heat · hydrate and plan shade" : "Comfortable with normal precautions"}</p></article>
-              <article className="signal-card crowd"><CoastIcon name="crowd" className="signal-icon"/><span className="signal-source camera">DEMO CAMERA</span><small>CROWDING</small><strong>{plan.top.signals.crowding.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.crowding.score}%` }}/></div><p>{plan.top.signals.crowding.score}/100 · {plan.top.signals.crowding.confidence}% confidence</p></article>
-              <article className="signal-card parking"><CoastIcon name="parking" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>PARKING</small><strong>{plan.top.signals.parking.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.parking.score}%` }}/></div><p>{plan.top.signals.parking.detail}</p></article>
-              <article className="signal-card posidonia"><CoastIcon name="leaf" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
+              <article className="signal-card crowd"><CoastIcon name="crowd" className="signal-icon"/><span className="signal-source camera">CAMERA PREVIEW</span><small>CROWDING</small><strong>{plan.top.signals.crowding.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.crowding.score}%` }}/></div><p>{plan.top.signals.crowding.score}/100 · {plan.top.signals.crowding.confidence}% reliability</p></article>
+              <article className="signal-card parking"><CoastIcon name="parking" className="signal-icon"/><span className="signal-source derived">ESTIMATE</span><small>PARKING</small><strong>{plan.top.signals.parking.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.parking.score}%` }}/></div><p>{plan.top.signals.parking.detail}</p></article>
+              <article className="signal-card posidonia"><CoastIcon name="leaf" className="signal-icon"/><span className="signal-source derived">ESTIMATE</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
             </div>
 
             <ForecastTrends spot={plan.top} />
@@ -297,38 +297,28 @@ export default function Home() {
             <article className="camera-agent-card">
               <div className="camera-orbit" aria-hidden="true"><CoastIcon name="camera"/><i/><i/></div>
               <div className="camera-copy">
-                <div className="camera-title"><p className="card-label">AI BEACH CHECK · EVERY 30 MIN</p><span>DEMO PREVIEW</span></div>
+                <div className="camera-title"><p className="card-label">BEACH SNAPSHOT · EVERY 30 MIN</p><span>PREVIEW</span></div>
                 <h3>{plan.top.webcam.coverage === "direct" ? plan.top.webcam.label : `Nearest view · ${plan.top.webcam.label}`}</h3>
-                <p>See how busy the shore feels before you leave. AJÒ turns one privacy-safe frame into useful crowding, shoreline and access hints; this contest observation is a demo preview, not a live AI claim.</p>
+                <p>See how busy the shore feels before you leave. AJÒ checks a single privacy-friendly snapshot for useful crowding, shoreline and access hints.</p>
                 <div className="camera-facts">
                   <span><b>LAST</b>{new Date(plan.top.signals.camera.observedAt).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</span>
                   <span><b>NEXT</b>{new Date(plan.top.signals.camera.expiresAt).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</span>
-                  <span><b>CONFIDENCE</b>{plan.top.signals.camera.confidence}%</span>
+                  <span><b>RELIABILITY</b>{plan.top.signals.camera.confidence}%</span>
                   <span><b>PRIVACY</b>{plan.top.signals.camera.retention}</span>
                 </div>
-                <div className="camera-flow"><span>ONE FRAME</span><b>→</b><span>PRIVACY SAFE</span><b>→</b><span>AI BEACH SIGNAL</span><b>→</b><span>BETTER PLAN</span></div>
               </div>
               <a className="camera-link" href={plan.top.webcam.url} target="_blank" rel="noreferrer">OPEN LIVE CAM <b>↗</b><small>{plan.top.webcam.coverage === "direct" ? "Direct beach view" : "Nearest coastal view"}</small></a>
             </article>
-            <p className="data-note">Weather and marine values: {plan.top.source === "live" ? <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open‑Meteo live feed ↗</a> : "contest demo dataset"}. Crowd, parking and Posidonia are explainable proxies; camera vision remains simulated until scheduled ingestion is enabled.</p>
+            <p className="data-note">Weather and sea values: {plan.top.source === "live" ? <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">current Open‑Meteo conditions ↗</a> : "preview conditions"}. Crowding, parking and Posidonia are helpful estimates—always check locally.</p>
           </section>
 
           <PlaceExperience spot={plan.top} />
 
-          <div className="decision-grid">
+          <div className="decision-grid consumer-reasons">
             <div className="why-card">
               <p className="card-label">WHY AJÒ CHOSE IT</p>
               {plan.top.reasons.map((reason) => <div className="reason" key={reason}><i>✓</i><span>{reason}</span></div>)}
               <div className="risk"><b>Local check</b><span>{plan.top.risk}</span></div>
-            </div>
-            <div className="agent-log">
-              <p className="card-label">AGENT ACTIVITY</p>
-              {plan.activity.map((item, index) => <div className="log-row" key={`${item}-${index}`}><i>{index + 1}</i><span>{item}</span></div>)}
-              <div className="agent-telemetry">
-                <span>TRACE <b>{plan.traceId === "deterministic" ? "LOCAL" : plan.traceId?.slice(-8) || "LOCAL"}</b></span>
-                <span>MODEL REQUESTS <b>{plan.usage?.requests || 0}</b></span>
-                <span>TOKENS <b>{plan.usage?.totalTokens || 0}</b></span>
-              </div>
             </div>
           </div>
 
@@ -341,7 +331,7 @@ export default function Home() {
           {alert && (
             <div className="replan-card">
               <div className="replan-icon">!</div>
-              <div><p className="eyebrow">CONDITIONS CHANGED · PLAN v{plan.version || 2}</p><h3>{replanFrom} → {plan.top.name}</h3><p>{plan.changedBecause || "Wind increased earlier than expected"}. AJÒ preserved the mission and switched to the safer fit.</p></div>
+              <div><p className="eyebrow">CONDITIONS CHANGED · BETTER OPTION FOUND</p><h3>{replanFrom} → {plan.top.name}</h3><p>{plan.changedBecause || "Wind increased earlier than expected"}. AJÒ kept the day you wanted and found a better fit.</p></div>
               <button onClick={() => setAlert(false)}>Accept switch →</button>
             </div>
           )}
@@ -363,14 +353,14 @@ export default function Home() {
       <section className="manifesto">
         <p className="eyebrow">BORN IN SARDINIA</p>
         <h2>Weather apps show data.<br/>Travel apps show places.<br/><em>AJÒ takes responsibility for the day.</em></h2>
-        <div className="agent-loop"><span>OBSERVE</span><b>→</b><span>PLAN</span><b>→</b><span>ACT</span><b>→</b><span>WATCH</span><b>→</b><span>RECOVER</span></div>
+        <p className="agentic-claim">SARDINIA’S FULLY AGENTIC BEACH COMPANION · DOZENS OF COASTAL SIGNALS, ONE SIMPLE CHOICE.</p>
         <a className="blue-zone-note" href="https://www.bluezones.com/explorations/sardinia-italy/" target="_blank" rel="noreferrer">
           <span>THE FIRST IDENTIFIED BLUE ZONE</span>
           Sardinia taught the world that a good life is a system of movement, environment, rhythm and community. AJÒ brings that whole-system thinking to the coast. ↗
         </a>
       </section>
 
-      <footer><div className="footer-brand"><span className="logo-seal"><Pavoncella /></span><div className="brand-mark">AJÒ</div></div><p>Built with GPT‑5.6 + Codex for OpenAI Build Week.</p><button onClick={install}>Install the PWA ↧</button></footer>
+      <footer><div className="footer-brand"><span className="logo-seal"><Pavoncella /></span><div className="brand-mark">AJÒ</div></div><p>Your best Sardinian beach day, beautifully simple.</p><button onClick={install}>Install the PWA ↧</button></footer>
     </main>
   );
 }

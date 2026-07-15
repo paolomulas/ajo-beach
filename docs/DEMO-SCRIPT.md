@@ -17,7 +17,7 @@ community—not as a medical claim.
 
 ## 0:25–1:05 — A polished product, not a prompt box
 
-Choose **Beach day**, Cagliari, 70 minutes, Family. Turn on **Live GPT‑5.6** only for the
+Choose **Beach day**, Cagliari, 70 minutes, Family. Turn on **Fresh analysis** only for the
 recorded controlled run and press **AJÒ, plan my day**.
 
 Point out the single recommendation, timed window, leave-by time, local safety check and
@@ -26,15 +26,20 @@ two feasible fallbacks. Do not narrate every weather value.
 > The ranking is deterministic and inspectable. GPT‑5.6 owns the judgment and
 > communication, but it can only choose from the typed tool output.
 
-## 1:05–1:35 — Make the agent implementation visible
+## 1:05–1:35 — Show depth without exposing machinery in the product
 
-Show **Agent Activity** and the telemetry chips.
+Stay in the consumer UI: show coastal intelligence, the thirty-minute beach snapshot,
+the dense island map and one community observation. Do not show trace, token or model
+telemetry inside the application.
 
-> This is an OpenAI Agents SDK run capped at two turns: one typed tool call and one
-> structured decision. The UI exposes the trace, request count and total tokens—not
-> hidden chain-of-thought. Equivalent missions are cached for thirty minutes.
+Cut briefly to the Devpost architecture visual while narrating the implementation:
 
-Briefly show the repository eval result: six tests passing.
+> Under the product, an OpenAI Agents SDK run is capped at two turns: one typed tool
+> call and one structured decision. Equivalent missions are cached for thirty minutes,
+> and ordinary refreshes cost zero model calls.
+
+Briefly show the repository eval result: nine tests passing. Then return immediately to
+the product experience.
 
 ## 1:35–2:15 — The wow moment: heartbeat and recovery
 

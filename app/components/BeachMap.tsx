@@ -67,13 +67,13 @@ export function BeachMap({ spots, mission, onMissionChange }: { spots: Spot[]; m
   return (
     <section className="map-explorer" aria-label="Explore Sardinian beaches on the map">
       <div className="map-heading">
-        <div><p className="eyebrow dark">52 COASTAL POIS · 9 LIVE PROFILES</p><h2>The whole island, one glance.</h2><p className="map-subtitle">Traffic lights show AJÒ discovery fit for your mission. Open a gold-ringed beach for full coastal intelligence.</p></div>
+        <div><p className="eyebrow dark">52 BEACHES · 9 COMPLETE GUIDES</p><h2>The whole island, one glance.</h2><p className="map-subtitle">Colours show how well each beach matches your day. Open a gold-ringed beach for the complete picture.</p></div>
         <div className="map-filters" aria-label="Filter beaches by mission">
           {(Object.keys(MISSION_LABELS) as Mission[]).map((item) => <button key={item} className={mission === item ? "active" : ""} onClick={() => onMissionChange(item)}>{MISSION_LABELS[item].title}</button>)}
         </div>
       </div>
       <div className="zone-filters" aria-label="Browse popular Sardinian zones">
-        <button className={showAll ? "active" : ""} onClick={() => setShowAll(!showAll)}>{showAll ? "All 52" : "9 live profiles"}</button>
+        <button className={showAll ? "active" : ""} onClick={() => setShowAll(!showAll)}>{showAll ? "All 52" : "9 complete guides"}</button>
         {POPULAR_ZONES.map((zone) => <button key={zone} onClick={() => selectZone(zone)}>{zone}</button>)}
       </div>
       <div className="map-stage">
@@ -93,10 +93,10 @@ export function BeachMap({ spots, mission, onMissionChange }: { spots: Spot[]; m
         <article className={`map-spot-card ${discovery ? "discovery-card" : ""}`}>
           {premium ? <div className="map-spot-image"><Image src={premium.image} alt={`Real view of ${premium.name}`} fill sizes="132px" /></div> : <div className={`map-discovery-visual ${scoreClass(selectedFit)}`}><CoastIcon name="location"/><b>{(selected as DiscoveryBeach).coast.toUpperCase()}</b></div>}
           <div className="map-spot-copy">
-            <span>{premium ? `${premium.area} · FULL COASTAL INTELLIGENCE` : `${(selected as DiscoveryBeach).zone} · OPEN DISCOVERY CATALOGUE`}</span>
+            <span>{premium ? `${premium.area} · COMPLETE BEACH GUIDE` : `${(selected as DiscoveryBeach).zone} · ISLAND DISCOVERY`}</span>
             <h3>{selected.name}</h3>
-            <p>{premium ? premium.note : "A verified geographic POI ready for an AJÒ mission. Live weather and derived beach signals are available on the gold-ringed profiles."}</p>
-            <div>{premium ? <><b>{premium.drive} min</b><b>{premium.missions.map((item) => MISSION_LABELS[item].title).join(" · ")}</b></> : <><b className={`fit-pill ${scoreClass(selectedFit)}`}>{selectedFit}% AJÒ fit</b><b>{(selected as DiscoveryBeach).coast} coast</b><b>OSM verified</b></>}</div>
+            <p>{premium ? premium.note : "A mapped Sardinian beach ready for your next day out. Open a gold-ringed beach for weather, sea, access and local experiences."}</p>
+            <div>{premium ? <><b>{premium.drive} min</b><b>{premium.missions.map((item) => MISSION_LABELS[item].title).join(" · ")}</b></> : <><b className={`fit-pill ${scoreClass(selectedFit)}`}>{selectedFit}% AJÒ fit</b><b>{(selected as DiscoveryBeach).coast} coast</b><b>Mapped location</b></>}</div>
           </div>
           {premium ? <a href={premium.webcam.url} target="_blank" rel="noreferrer"><CoastIcon name="camera"/> Live camera <b>↗</b></a> : <a href={osmMapUrl(selected as DiscoveryBeach)} target="_blank" rel="noreferrer"><CoastIcon name="location"/> Open map <b>↗</b></a>}
         </article>

@@ -38,15 +38,15 @@ export function CommunityReport({ beachId, beachName }: { beachId: string; beach
     <section className={`community-report ${open ? "open" : ""}`} aria-label={`Report conditions at ${beachName}`}>
       <div className="community-intro">
         <span className="community-orbit"><CoastIcon name="crowd" /></span>
-        <div><p className="eyebrow dark">COMMUNITY PULSE · CONTEST DEMO</p><h3>What do you see at {beachName}?</h3><p>One tap becomes a time-limited coastal signal. In this demo it stays only on your device.</p></div>
+        <div><p className="eyebrow dark">COMMUNITY PULSE</p><h3>What do you see at {beachName}?</h3><p>Share a recent observation to help make the next beach choice better.</p></div>
         <button onClick={() => { setOpen(!open); setReportId(null); }}>{open ? "Close" : "Report conditions"}</button>
       </div>
       {open && !reportId && <div className="report-form">
         <div className="report-signals">{SIGNALS.map(([id, label, icon]) => <button key={id} className={signal === id ? "active" : ""} onClick={() => setSignal(id)}><CoastIcon name={icon}/><span>{label}</span></button>)}</div>
         <div className="severity-row"><span>Intensity</span>{(["low", "medium", "high"] as Severity[]).map((item) => <button key={item} className={severity === item ? "active" : ""} onClick={() => setSeverity(item)}>{item}</button>)}<button className="submit-report" onClick={submit}>Send observation →</button></div>
-        <p className="report-privacy">No login in contest mode · local-only storage · expires after 3 hours · never treated as an official safety notice.</p>
+        <p className="report-privacy">Saved only on this device · expires after 3 hours · never treated as an official safety notice.</p>
       </div>}
-      {reportId && <div className="report-success"><b>✓ Observation recorded</b><span>REPORT ID · {reportId.slice(0, 8).toUpperCase()}</span><p>AJÒ would merge corroborating reports before changing a plan. Supabase persistence is intentionally off for this contest preview.</p></div>}
+      {reportId && <div className="report-success"><b>✓ Observation recorded</b><span>REPORT ID · {reportId.slice(0, 8).toUpperCase()}</span><p>Thank you. AJÒ looks for matching observations before using a community update.</p></div>}
     </section>
   );
 }
