@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Pavoncella } from "@/app/components/Pavoncella";
+import { CoastIcon, CoastIconName } from "@/app/components/CoastIcon";
 import { buildDemoPlan, Profile } from "@/lib/engine";
 import { MISSION_LABELS, Mission } from "@/lib/spots";
 
@@ -25,6 +26,8 @@ const defaultProfile: Profile = {
   accessible: false,
   maxDrive: 70,
 };
+
+const missionIcons: Record<Mission, CoastIconName> = { relax: "relax", life: "spark", surf: "surf", kite: "kite" };
 
 export default function Home() {
   const [profile, setProfile] = useState<Profile>(defaultProfile);
@@ -172,8 +175,8 @@ export default function Home() {
       )}
       <header className="topbar">
         <a className="brand" href="#top" aria-label="AJÒ home">
-          <span className="brand-mark">AJÒ</span>
-          <span className="brand-sub">SARDINIA, IN SYNC</span>
+          <span className="logo-seal"><Pavoncella /></span>
+          <span className="brand-copy"><span className="brand-mark">AJÒ</span><span className="brand-sub">SARDINIA, IN SYNC</span></span>
         </a>
         <div className="header-actions">
           <span className="live-pill"><i /> {islandWeather.source} ISLAND</span>
@@ -189,9 +192,9 @@ export default function Home() {
           <h1>Don’t search beaches.<br /><em>Give AJÒ a mission.</em></h1>
           <p className="lede">AJÒ plans your day, watches the island and changes course before the wind does.</p>
           <div className="weather-strip">
-            <span><b>{islandWeather.temperature}°</b> Cagliari</span>
-            <span><b>{islandWeather.windSpeed} kt</b> Poetto wind</span>
-            <span><b>{islandWeather.waveHeight.toFixed(1)} m</b> South swell</span>
+            <span><CoastIcon name="sun"/><b>{islandWeather.temperature}°</b> Cagliari</span>
+            <span><CoastIcon name="wind"/><b>{islandWeather.windSpeed} kt</b> Poetto wind</span>
+            <span><CoastIcon name="wave"/><b>{islandWeather.waveHeight.toFixed(1)} m</b> South swell</span>
           </div>
         </div>
         <div className="island-art" aria-hidden="true">
@@ -217,7 +220,7 @@ export default function Home() {
             const item = MISSION_LABELS[mission];
             return (
               <button key={mission} className={`mission-card ${profile.mission === mission ? "selected" : ""}`} onClick={() => setProfile({ ...profile, mission })}>
-                <span className="mission-icon">{item.icon}</span>
+                <span className="mission-icon"><CoastIcon name={missionIcons[mission]} /></span>
                 <span><b>{item.title}</b><small>{item.subtitle}</small></span>
                 <i>{profile.mission === mission ? "●" : "○"}</i>
               </button>
@@ -260,7 +263,7 @@ export default function Home() {
               <p className="result-label">BEST MOVE · {plan.window}</p>
               <h3>{plan.top.name}</h3>
               <p>{plan.summary}</p>
-              <div className="conditions-row"><span>⌁ {plan.top.windSpeed} kt · {plan.top.gusts} gusts</span><span>≈ {plan.top.waveHeight.toFixed(1)} m · {plan.top.wavePeriod}s</span><span>◉ {plan.top.seaTemperature}° water</span></div>
+              <div className="conditions-row"><span><CoastIcon name="wind"/> {plan.top.windSpeed} kt · {plan.top.gusts} gusts</span><span><CoastIcon name="wave"/> {plan.top.waveHeight.toFixed(1)} m · {plan.top.wavePeriod}s</span><span><CoastIcon name="water"/> {plan.top.seaTemperature}° water</span></div>
               <strong>{plan.departure}</strong>
             </div>
             <a className="photo-credit" href={plan.top.imageSource} target="_blank" rel="noreferrer">REAL {plan.top.name.toUpperCase()} · {plan.top.imageCredit}</a>
@@ -273,27 +276,27 @@ export default function Home() {
             </div>
 
             <div className="signal-grid">
-              <article className="signal-card"><span className="signal-source live">LIVE</span><small>WIND · GUSTS</small><strong>{plan.top.windSpeed} <i>kt</i></strong><p>Gusts {plan.top.gusts} kt · direction {plan.top.windDirection}°</p></article>
-              <article className="signal-card"><span className="signal-source live">LIVE</span><small>SEA STATE</small><strong>{plan.top.waveHeight.toFixed(1)} <i>m</i></strong><p>{plan.top.wavePeriod}s period · local verification advised</p></article>
-              <article className="signal-card"><span className="signal-source live">LIVE</span><small>WATER · AIR</small><strong>{plan.top.seaTemperature}° <i>water</i></strong><p>{plan.top.temperature}° air · feels {plan.top.apparentTemperature}°</p></article>
-              <article className="signal-card crowd"><span className="signal-source camera">DEMO CAMERA</span><small>CROWDING</small><strong>{plan.top.signals.crowding.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.crowding.score}%` }}/></div><p>{plan.top.signals.crowding.score}/100 · {plan.top.signals.crowding.confidence}% confidence</p></article>
-              <article className="signal-card parking"><span className="signal-source derived">DERIVED</span><small>PARKING</small><strong>{plan.top.signals.parking.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.parking.score}%` }}/></div><p>{plan.top.signals.parking.detail}</p></article>
-              <article className="signal-card posidonia"><span className="signal-source derived">DERIVED</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
+              <article className="signal-card"><CoastIcon name="wind" className="signal-icon"/><span className="signal-source live">LIVE</span><small>WIND · GUSTS</small><strong>{plan.top.windSpeed} <i>kt</i></strong><p>Gusts {plan.top.gusts} kt · direction {plan.top.windDirection}°</p></article>
+              <article className="signal-card"><CoastIcon name="wave" className="signal-icon"/><span className="signal-source live">LIVE</span><small>SEA STATE</small><strong>{plan.top.waveHeight.toFixed(1)} <i>m</i></strong><p>{plan.top.wavePeriod}s period · local verification advised</p></article>
+              <article className="signal-card"><CoastIcon name="water" className="signal-icon"/><span className="signal-source live">LIVE</span><small>WATER · AIR</small><strong>{plan.top.seaTemperature}° <i>water</i></strong><p>{plan.top.temperature}° air · feels {plan.top.apparentTemperature}°</p></article>
+              <article className="signal-card crowd"><CoastIcon name="crowd" className="signal-icon"/><span className="signal-source camera">DEMO CAMERA</span><small>CROWDING</small><strong>{plan.top.signals.crowding.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.crowding.score}%` }}/></div><p>{plan.top.signals.crowding.score}/100 · {plan.top.signals.crowding.confidence}% confidence</p></article>
+              <article className="signal-card parking"><CoastIcon name="parking" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>PARKING</small><strong>{plan.top.signals.parking.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.parking.score}%` }}/></div><p>{plan.top.signals.parking.detail}</p></article>
+              <article className="signal-card posidonia"><CoastIcon name="leaf" className="signal-icon"/><span className="signal-source derived">DERIVED</span><small>POSIDONIA RISK</small><strong>{plan.top.signals.posidonia.label}</strong><div className="meter"><i style={{ width: `${plan.top.signals.posidonia.score}%` }}/></div><p>{plan.top.signals.posidonia.detail}</p></article>
             </div>
 
             <article className="camera-agent-card">
-              <div className="camera-orbit" aria-hidden="true"><span>◉</span><i/><i/></div>
+              <div className="camera-orbit" aria-hidden="true"><CoastIcon name="camera"/><i/><i/></div>
               <div className="camera-copy">
-                <div className="camera-title"><p className="card-label">CAMERA AGENT · 30 MIN LOOP</p><span>SIMULATED SNAPSHOT</span></div>
+                <div className="camera-title"><p className="card-label">AI BEACH CHECK · EVERY 30 MIN</p><span>DEMO PREVIEW</span></div>
                 <h3>{plan.top.webcam.coverage === "direct" ? plan.top.webcam.label : `Nearest view · ${plan.top.webcam.label}`}</h3>
-                <p>In production AJÒ samples one frame every 30 minutes, removes identifiable detail, and converts the scene into typed crowding, shoreline and access signals. The current observation is a transparent demo—not a live AI claim.</p>
+                <p>See how busy the shore feels before you leave. AJÒ turns one privacy-safe frame into useful crowding, shoreline and access hints; this contest observation is a demo preview, not a live AI claim.</p>
                 <div className="camera-facts">
                   <span><b>LAST</b>{new Date(plan.top.signals.camera.observedAt).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</span>
                   <span><b>NEXT</b>{new Date(plan.top.signals.camera.expiresAt).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}</span>
                   <span><b>CONFIDENCE</b>{plan.top.signals.camera.confidence}%</span>
                   <span><b>PRIVACY</b>{plan.top.signals.camera.retention}</span>
                 </div>
-                <div className="camera-flow"><span>SNAPSHOT</span><b>→</b><span>PRIVACY FILTER</span><b>→</b><span>GPT‑5.6 VISION</span><b>→</b><span>TYPED SIGNAL</span><b>→</b><span>REPLAN</span></div>
+                <div className="camera-flow"><span>ONE FRAME</span><b>→</b><span>PRIVACY SAFE</span><b>→</b><span>AI BEACH SIGNAL</span><b>→</b><span>BETTER PLAN</span></div>
               </div>
               <a className="camera-link" href={plan.top.webcam.url} target="_blank" rel="noreferrer">OPEN LIVE CAM <b>↗</b><small>{plan.top.webcam.coverage === "direct" ? "Direct beach view" : "Nearest coastal view"}</small></a>
             </article>
@@ -318,9 +321,9 @@ export default function Home() {
           </div>
 
           <div className={`watch-card ${watching ? "armed" : ""}`}>
-            <div className="radar"><i/><i/><b>⌁</b></div>
-            <div><p className="card-label">03 · STAY IN SYNC</p><h3>{watching ? plan.watch.label : "Let AJÒ watch the island"}</h3><p>{watching ? `AJÒ will react when ${plan.watch.trigger}.` : "Arm a lightweight weather watch and get one useful notification—not a stream of noise."}</p></div>
-            <button onClick={watching ? simulateChange : armWatch} disabled={replanning}>{replanning ? "Replanning…" : watching ? "Simulate change" : "Arm watch"}</button>
+            <div className="alert-icon"><CoastIcon name="bell"/></div>
+            <div className="watch-copy"><p className="card-label">SMART BEACH ALERTS</p><h3>{watching ? `We’re keeping ${plan.top.name} fresh.` : "Want AJÒ to protect this choice?"}</h3><p>{watching ? `You’ll hear from us only if ${plan.watch.trigger}, with ${plan.watch.fallback} ready as your backup.` : "We’ll check the few things that can spoil the plan and notify you only when another beach becomes the better move."}</p><div className="watch-signals"><span><CoastIcon name="wind"/>Wind</span><span><CoastIcon name="wave"/>Sea</span><span><CoastIcon name="crowd"/>Crowding</span><span><CoastIcon name="parking"/>Parking</span></div></div>
+            <button onClick={watching ? simulateChange : armWatch} disabled={replanning}>{replanning ? "Updating…" : watching ? "Preview an update" : "Turn on smart alerts"}</button>
           </div>
 
           {alert && (
@@ -355,7 +358,7 @@ export default function Home() {
         </a>
       </section>
 
-      <footer><div className="brand-mark">AJÒ</div><p>Built with GPT‑5.6 + Codex for OpenAI Build Week.</p><button onClick={install}>Install the PWA ↧</button></footer>
+      <footer><div className="footer-brand"><span className="logo-seal"><Pavoncella /></span><div className="brand-mark">AJÒ</div></div><p>Built with GPT‑5.6 + Codex for OpenAI Build Week.</p><button onClick={install}>Install the PWA ↧</button></footer>
     </main>
   );
 }
