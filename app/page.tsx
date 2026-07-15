@@ -244,7 +244,7 @@ export default function Home() {
         <button className="primary-cta" onClick={createPlan} disabled={loading}>
           <span>{loading ? loadingLabels[stage] : "AJÒ, plan my day"}</span><b>{loading ? "···" : "→"}</b>
         </button>
-        <p className="safety-note">Forecasts are indicative. For surf and kite, always verify locally and respect restrictions.</p>
+        <p className="safety-note">Forecasts are indicative. Check local conditions and beach access before you set out.</p>
       </section>
 
       {loading && (

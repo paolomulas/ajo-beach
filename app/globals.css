@@ -267,6 +267,25 @@ footer button { background:transparent; color:white; border:1px solid rgba(255,2
 }
 @media (min-width:761px) and (max-width:1050px) { .mission-grid { grid-template-columns:repeat(2,1fr); } }
 
+/* Desktop readability: the first version was tuned too close to the mobile scale. */
+@media (min-width:1051px) {
+  .map-explorer,.mission-panel,.plan-section { max-width:1280px; }
+  .eyebrow { font-size:12px; letter-spacing:3px; }
+  .map-subtitle { font-size:16px; }
+  .map-filters button { padding:11px 16px; font-size:12px; }
+  .zone-filters button { padding:9px 13px; font-size:12px; }
+  .map-hint b { font-size:12px; }.map-hint small { font-size:10px; }
+  .map-spot-copy>span { font-size:11px; }.map-spot-copy h3 { font-size:30px; }.map-spot-copy p { font-size:14px; }
+  .map-spot-copy b { font-size:11px; }.map-spot-card>a { font-size:12px; }
+  .map-legend { font-size:11px; }.nearby-title span { font-size:10px; }.nearby-title b { font-size:17px; }
+  .nearby-row>button b { font-size:14px; }.nearby-row>button small { font-size:10px; }
+  .section-heading h2 { font-size:clamp(38px,4vw,54px); }
+  .mission-card { min-height:126px; padding:22px; }.mission-card b { font-size:20px; }.mission-card small { font-size:14px; }
+  .mission-icon { width:54px; height:54px; }.mission-icon svg { width:29px; }
+  .constraints label span { font-size:11px; }.constraints select,.chip-row button { font-size:15px; }
+  .primary-cta { font-size:19px; padding:21px 24px; }.safety-note { font-size:12px; }
+}
+
 /* Dense, open-data beach discovery layer */
 .map-subtitle { max-width:590px; margin:10px 0 0; color:#687a74; font-size:13px; line-height:1.5; }
 .zone-filters button.active { color:white; background:var(--ink); }

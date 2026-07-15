@@ -227,8 +227,8 @@ export const SPOTS: Spot[] = [
 export const MISSION_LABELS: Record<Mission, { title: string; subtitle: string; icon: string }> = {
   relax: { title: "Beach day", subtitle: "Calm, shade & easy water", icon: "☀" },
   life: { title: "Beach life", subtitle: "Sunset, food & local rhythm", icon: "✦" },
-  surf: { title: "Surf", subtitle: "Find the cleanest window", icon: "≈" },
-  kite: { title: "Kitesurf", subtitle: "Wind, gusts & skill match", icon: "⌁" },
+  surf: { title: "Explore", subtitle: "Trails, coves & viewpoints", icon: "⌖" },
+  kite: { title: "Water time", subtitle: "SUP, snorkel & kayak", icon: "≈" },
 };
 
 export type SpotDetails = {
