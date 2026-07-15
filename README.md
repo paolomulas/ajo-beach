@@ -82,4 +82,7 @@ Live environmental data: Open‑Meteo, CC BY 4.0, with attribution.
 
 ## License
 
-MIT for original source code. Third-party photos are loaded remotely from Unsplash for prototype presentation and are not redistributed in this repository.
+MIT for original source code. Every beach image depicts its named Sardinian location,
+is stored locally as an optimized derivative, and links to its Creative Commons source.
+See [visual sources](docs/PHOTO-CREDITS.md) for authors and licenses. The home-page
+silhouette is based on a public-domain geographic map of Sardinia.

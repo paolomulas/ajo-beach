@@ -30,8 +30,12 @@ h1 em,h2 em { color:var(--sun); font-style:normal; }
 .weather-strip { margin-top:38px; display:flex; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.18); padding-top:20px; gap:28px; }
 .weather-strip span { font-size:11px; color:rgba(255,255,255,.55); }
 .weather-strip b { display:block; color:white; font-size:13px; margin-bottom:3px; }
-.island-art { position:relative; justify-self:center; z-index:1; opacity:.95; filter:drop-shadow(0 30px 40px rgba(0,0,0,.2)); }
-.island-art svg { width:min(25vw,260px); min-width:190px; }
+.island-art { position:relative; justify-self:center; z-index:1; width:min(25vw,260px); min-width:190px; aspect-ratio:2286.104/4402.728; opacity:.98; filter:drop-shadow(0 30px 40px rgba(0,0,0,.2)); }
+.sardinia-shape { position:absolute; inset:0; background:linear-gradient(145deg,#70d7ca 0%,#2c8072 100%); -webkit-mask:url('/sardinia-map.svg') center/contain no-repeat; mask:url('/sardinia-map.svg') center/contain no-repeat; }
+.map-marker { position:absolute; z-index:2; width:12px; height:12px; border-radius:50%; background:white; box-shadow:0 0 0 5px rgba(255,255,255,.12); }
+.marker-north { left:67%; top:12%; }
+.marker-west { left:13%; top:48%; }
+.marker-south { left:52%; top:87%; background:var(--sun); box-shadow:0 0 0 6px rgba(255,202,88,.14); }
 .wind-lines { position:absolute; top:42%; right:-35%; color:rgba(255,255,255,.37); font-size:44px; letter-spacing:8px; transform:rotate(-8deg); }
 .hero-orb { position:absolute; border-radius:50%; border:1px solid rgba(255,255,255,.08); }
 .orb-one { width:570px; height:570px; right:-130px; top:-150px; }
@@ -76,7 +80,9 @@ h1 em,h2 em { color:var(--sun); font-style:normal; }
 .plan-section { padding-top:20px; }
 .mode-badge { color:#69746f; border-color:#ccd4ce; background:rgba(255,255,255,.42); }
 .mode-badge.live { color:var(--ink); background:#d6eee8; border-color:#8cc4b8; }
-.hero-result { min-height:440px; background-size:cover; background-position:center; border-radius:24px; padding:38px; display:flex; gap:30px; align-items:flex-end; color:white; overflow:hidden; box-shadow:0 26px 60px rgba(13,47,41,.17); }
+.hero-result { position:relative; min-height:440px; background-size:cover; background-position:center; border-radius:24px; padding:38px; display:flex; gap:30px; align-items:flex-end; color:white; overflow:hidden; box-shadow:0 26px 60px rgba(13,47,41,.17); }
+.photo-credit { position:absolute; right:16px; bottom:14px; color:rgba(255,255,255,.78); background:rgba(8,35,31,.55); backdrop-filter:blur(8px); border-radius:99px; padding:7px 10px; font-size:8px; font-weight:800; letter-spacing:.08em; text-decoration:none; }
+.photo-credit:hover { color:white; background:rgba(8,35,31,.8); }
 .score-ring { width:106px; height:106px; flex:0 0 auto; border-radius:50%; border:7px solid var(--sun); display:grid; place-items:center; align-content:center; background:rgba(13,47,41,.54); backdrop-filter:blur(8px); }
 .score-ring b { font:800 34px/1 "Manrope",sans-serif; }
 .score-ring span { font-size:7px; text-align:center; letter-spacing:1.2px; opacity:.8; }
@@ -115,8 +121,9 @@ h1 em,h2 em { color:var(--sun); font-style:normal; }
 .alternatives { margin-top:60px; }
 .alternative-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
 .alternative-card { border:1px solid #d9ddd6; border-radius:17px; overflow:hidden; background:rgba(255,255,255,.55); }
-.alt-image { height:190px; background-size:cover; background-position:center; padding:14px; display:flex; justify-content:space-between; align-items:flex-start; color:white; }
+.alt-image { height:190px; background-size:cover; background-position:center; padding:14px; display:flex; justify-content:space-between; align-items:flex-start; color:white; position:relative; }
 .alt-image span,.alt-image b { background:rgba(13,47,41,.68); backdrop-filter:blur(7px); border-radius:99px; padding:7px 9px; font-size:9px; }
+.alt-image a { position:absolute; right:10px; bottom:10px; color:white; background:rgba(13,47,41,.68); backdrop-filter:blur(7px); border-radius:99px; padding:6px 8px; font-size:8px; font-weight:800; letter-spacing:.08em; text-decoration:none; }
 .alternative-card>div:last-child { padding:18px; }
 .alternative-card h3 { font:700 21px "Manrope",sans-serif; margin-bottom:6px; }
 .alternative-card p { color:var(--muted); font-size:12px; }
@@ -145,8 +152,7 @@ footer button { background:transparent; color:white; border:1px solid rgba(255,2
   .live-pill { display:none; }
   .hero { min-height:720px; grid-template-columns:1fr; padding:115px 22px 105px; align-items:start; }
   h1 { letter-spacing:-3px; }
-  .island-art { position:absolute; width:150px; right:4px; bottom:70px; opacity:.48; }
-  .island-art svg { min-width:130px; }
+  .island-art { position:absolute; width:130px; min-width:130px; right:10px; bottom:74px; opacity:.5; }
   .wind-lines { display:none; }
   .weather-strip { gap:16px; margin-top:28px; padding-right:120px; }
   .mission-panel,.plan-section { padding-left:16px; padding-right:16px; }

@@ -193,16 +193,10 @@ export default function Home() {
           </div>
         </div>
         <div className="island-art" aria-hidden="true">
-          <svg viewBox="0 0 270 430" role="img">
-            <defs>
-              <linearGradient id="island" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stopColor="#70d7ca" />
-                <stop offset="1" stopColor="#2c8072" />
-              </linearGradient>
-            </defs>
-            <path d="M116 10c31 12 50 42 47 68-2 19 25 26 34 44 13 26-10 49-5 72 4 20 31 32 31 60 0 35-36 54-48 83-10 24-6 65-35 80-25 13-57-5-64-31-7-25-30-33-38-57-10-31 15-55 18-84 3-26-16-48-8-77 7-26 34-38 39-64 4-24-5-46 5-70 5-12 13-20 24-24z" fill="url(#island)"/>
-            <circle cx="145" cy="318" r="8" fill="#ffca58"/><circle cx="81" cy="217" r="7" fill="#fff"/><circle cx="169" cy="106" r="7" fill="#fff"/>
-          </svg>
+          <div className="sardinia-shape" />
+          <i className="map-marker marker-north" />
+          <i className="map-marker marker-west" />
+          <i className="map-marker marker-south" />
           <div className="wind-lines">⌁⌁⌁</div>
         </div>
       </section>
@@ -267,6 +261,7 @@ export default function Home() {
               <div className="conditions-row"><span>⌁ {plan.top.windSpeed} kt</span><span>≈ {plan.top.waveHeight.toFixed(1)} m</span><span>☀ {plan.top.temperature}°</span></div>
               <strong>{plan.departure}</strong>
             </div>
+            <a className="photo-credit" href={plan.top.imageSource} target="_blank" rel="noreferrer">REAL {plan.top.name.toUpperCase()} · {plan.top.imageCredit}</a>
           </article>
 
           <div className="decision-grid">
@@ -305,7 +300,7 @@ export default function Home() {
             <div className="alternative-grid">
               {plan.alternatives.map((spot, index) => (
                 <article key={spot.id} className="alternative-card">
-                  <div className="alt-image" style={{ backgroundImage: `url(${spot.image})` }}><span>0{index + 2}</span><b>{spot.score}% fit</b></div>
+                  <div className="alt-image" style={{ backgroundImage: `url(${spot.image})` }}><span>0{index + 2}</span><b>{spot.score}% fit</b><a href={spot.imageSource} target="_blank" rel="noreferrer" aria-label={`Photo credit for ${spot.name}`}>REAL PHOTO ↗</a></div>
                   <div><h3>{spot.name}</h3><p>{spot.note}</p><small>{spot.drive} min · {spot.windSpeed} kt · {spot.waveHeight.toFixed(1)} m</small></div>
                 </article>
               ))}
